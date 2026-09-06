@@ -41,11 +41,33 @@ def inject_into_html(data: dict) -> None:
     """
     if INDEX_HTML.exists():
         content = INDEX_HTML.read_text(encoding="utf-8")
-        replacement = f"let DB = {json.dumps(data)};"
-        INDEX_HTML.write_text(
-            re.sub(r"let DB = .*?;", lambda _: replacement, content, count=1),
-            encoding="utf-8",
+        # Escape characters that could break out of or prematurely terminate an HTML script tag
+        raw_json = json.dumps(data)
+        escaped_json = (
+            raw_json.replace("&", "\\u0026")
+            .replace("<", "\\u003c")
+            .replace(">", "\\u003e")
+            .replace("\u2028", "\\u2028")
+            .replace("\u2029", "\\u2029")
         )
+        replacement = f"let DB = {escaped_json};"
+        # Match let DB = <json>; across lines without stopping prematurely on internal semicolons
+        new_content, count = re.subn(
+            r"let DB = .*?;\s*(?=\n\s*(?:let|const|var|function|window|\binit\b|\brender))",
+            lambda _: replacement + "\n    ",
+            content,
+            count=1,
+            flags=re.DOTALL,
+        )
+        if count == 0:
+            # Fallback for single-line format
+            new_content = re.sub(
+                r"let DB = .*?;",
+                lambda _: replacement,
+                content,
+                count=1,
+            )
+        INDEX_HTML.write_text(new_content, encoding="utf-8")
         print(f"Injected fresh data into {INDEX_HTML}")
 
 
