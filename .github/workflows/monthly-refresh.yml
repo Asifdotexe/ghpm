@@ -1,0 +1,59 @@
+name: Monthly Dashboard Refresh (Open PR)
+
+on:
+  schedule:
+    # Runs at 00:00 UTC on the 1st of every month
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  monthly-refresh-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.6.14"
+
+      - name: Fetch Repositories and Issues via GitHub CLI
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p data/interim data/final
+          gh repo list Asifdotexe --limit 150 --json name,description,updatedAt > data/interim/repos.json
+          python -c "import json, csv; data = json.load(open('data/interim/repos.json', encoding='utf-8')); keys = ['name', 'description', 'updatedAt']; writer = csv.DictWriter(open('data/interim/repos.csv', 'w', encoding='utf-8', newline=''), fieldnames=keys); writer.writeheader(); writer.writerows(data)"
+          uv run code/src/fetch_issues.py
+
+      - name: Rebuild Dashboard Dataset & HTML
+        run: uv run code/src/build_dashboard.py
+
+      - name: Create Pull Request for Monthly Sync
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(data): monthly snapshot refresh"
+          branch: "monthly-data-sync"
+          title: "chore(data): monthly dashboard refresh"
+          body: |
+            ### Monthly Dashboard & Backlog Refresh
+            Automated monthly pull request generated on the 1st of the month.
+            - Updates `data/interim/repos.csv` and `data/interim/issues.csv`
+            - Compiles `data/final/dashboard_data.json`
+            - Updates `index.html`
+
+            Merging this PR into `main` will automatically trigger the `Deploy Dashboard to GitHub Pages` workflow.
+          delete-branch: true
