@@ -27,8 +27,11 @@ jobs:
 
       - name: Prepare static site distribution
         run: |
-          mkdir -p _site/data/final
+          mkdir -p _site/data/final _site/asset
           cp index.html _site/
+          if [ -d asset ]; then
+            cp -r asset/* _site/asset/
+          fi
           if [ -f data/final/dashboard_data.json ]; then
             cp data/final/dashboard_data.json _site/data/final/
           fi
