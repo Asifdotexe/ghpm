@@ -4,11 +4,13 @@ Module responsible for fetching the github issues associated with a given list o
 
 import csv
 import json
+from pathlib import Path
 import subprocess
 
 USERNAME = "Asifdotexe"
-CSV_FILE = "data/interim/repos.csv"
-OUTPUT_FILE = "data/interim/issues.csv"
+CSV_FILE = Path("data/interim/repos.csv")
+OUTPUT_FILE = Path("data/interim/issues.csv")
+TEMP_OUTPUT_FILE = Path("data/interim/issues.csv.tmp")
 
 
 def handle_gh_error(repo_name: str, stderr: str) -> bool:
@@ -45,38 +47,44 @@ def main() -> None:
     fieldnames = ["repo_name", "issue_number", "title", "labels"]
     total_issues = 0
 
-    with open(CSV_FILE, mode="r", encoding="utf-8") as in_f, \
-         open(OUTPUT_FILE, mode="w", encoding="utf-8", newline="") as out_f:
-        reader = csv.DictReader(in_f)
-        writer = csv.DictWriter(out_f, fieldnames=fieldnames)
-        writer.writeheader()
+    try:
+        with open(CSV_FILE, mode="r", encoding="utf-8") as in_f, \
+             open(TEMP_OUTPUT_FILE, mode="w", encoding="utf-8", newline="") as out_f:
+            reader = csv.DictReader(in_f)
+            writer = csv.DictWriter(out_f, fieldnames=fieldnames)
+            writer.writeheader()
 
-        for row_idx, row in enumerate(reader, start=2):
-            repo_name = row.get("name")
-            if not repo_name or not repo_name.strip():
-                raise ValueError(
-                    f"Row {row_idx} in '{CSV_FILE}' is missing a valid 'name' value. ",
-                    "Ensure the CSV has a 'name' column and no blank entries."
-                )
+            for row_idx, row in enumerate(reader, start=2):
+                repo_name = row.get("name")
+                if not repo_name or not repo_name.strip():
+                    raise ValueError(
+                        f"Row {row_idx} in '{CSV_FILE}' is missing a valid 'name' value. "
+                        "Ensure the CSV has a 'name' column and no blank entries."
+                    )
 
-            print(f"Fetch issues. Repo: {repo_name}")
-            cmd = ["gh", "issue", "list", "--repo", f"{USERNAME}/{repo_name}", "--json", "number,title,labels"]
-            result = subprocess.run(cmd, capture_output=True, text=True)
+                print(f"Fetch issues. Repo: {repo_name}")
+                cmd = ["gh", "issue", "list", "--repo", f"{USERNAME}/{repo_name}", "--json", "number,title,labels"]
+                result = subprocess.run(cmd, capture_output=True, text=True)
 
-            if result.returncode != 0:
-                if handle_gh_error(repo_name, result.stderr):
-                    continue
+                if result.returncode != 0:
+                    if handle_gh_error(repo_name, result.stderr):
+                        continue
 
-            for issue in json.loads(result.stdout):
-                writer.writerow({
-                    "repo_name": repo_name,
-                    "issue_number": issue.get("number"),
-                    "title": issue.get("title"),
-                    "labels": ", ".join(lbl["name"] for lbl in issue.get("labels", [])),
-                })
-                total_issues += 1
+                for issue in json.loads(result.stdout):
+                    writer.writerow({
+                        "repo_name": repo_name,
+                        "issue_number": issue.get("number"),
+                        "title": issue.get("title"),
+                        "labels": ", ".join(lbl["name"] for lbl in issue.get("labels", [])),
+                    })
+                    total_issues += 1
 
-    print(f"Done. Saved {total_issues} issues to {OUTPUT_FILE}")
+        TEMP_OUTPUT_FILE.replace(OUTPUT_FILE)
+        print(f"Done. Saved {total_issues} issues to {OUTPUT_FILE}")
+    except Exception:
+        if TEMP_OUTPUT_FILE.exists():
+            TEMP_OUTPUT_FILE.unlink()
+        raise
 
 
 if __name__ == "__main__":

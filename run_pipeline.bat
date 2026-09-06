@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-echo [1/2] Fetching repository list...
+echo [1/3] Fetching repository list...
 if not exist "data\interim" mkdir data\interim
 
 gh repo list --limit 150 --json name,description,updatedAt > data\interim\repos.json
