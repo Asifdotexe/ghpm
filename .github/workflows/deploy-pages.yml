@@ -25,10 +25,18 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Prepare static site distribution
+        run: |
+          mkdir -p _site/data/final
+          cp index.html _site/
+          if [ -f data/final/dashboard_data.json ]; then
+            cp data/final/dashboard_data.json _site/data/final/
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
 
       - name: Deploy to GitHub Pages
         id: deployment

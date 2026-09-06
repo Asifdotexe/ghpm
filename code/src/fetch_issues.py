@@ -5,12 +5,26 @@ Module responsible for fetching the github issues associated with a given list o
 import csv
 import json
 from pathlib import Path
+import re
 import subprocess
 
 USERNAME = "Asifdotexe"
 CSV_FILE = Path("data/interim/repos.csv")
 OUTPUT_FILE = Path("data/interim/issues.csv")
 TEMP_OUTPUT_FILE = Path("data/interim/issues.csv.tmp")
+REPO_NAME_REGEX = re.compile(r"^[a-zA-Z0-9._-]+$")
+
+
+def sanitize_csv_cell(value: object) -> object:
+    """
+    Sanitize values to prevent CSV formula injection (DDE attacks) in spreadsheet tools.
+
+    :param value: Cell value to sanitize.
+    :return: Sanitized cell value.
+    """
+    if isinstance(value, str) and value and value[0] in ("=", "+", "-", "@", "\t", "\r"):
+        return f"'{value}"
+    return value
 
 
 def handle_gh_error(repo_name: str, stderr: str) -> bool:
@@ -62,6 +76,13 @@ def main() -> None:
                         "Ensure the CSV has a 'name' column and no blank entries."
                     )
 
+                repo_name = repo_name.strip()
+                if not REPO_NAME_REGEX.match(repo_name):
+                    raise ValueError(
+                        f"Row {row_idx} in '{CSV_FILE}' has invalid repo name '{repo_name}'. "
+                        "Repo names must contain only alphanumeric characters, '.', '_', or '-'."
+                    )
+
                 print(f"Fetch issues. Repo: {repo_name}")
                 cmd = ["gh", "issue", "list", "--repo", f"{USERNAME}/{repo_name}", "--json", "number,title,labels"]
                 result = subprocess.run(cmd, capture_output=True, text=True)
@@ -72,10 +93,10 @@ def main() -> None:
 
                 for issue in json.loads(result.stdout):
                     writer.writerow({
-                        "repo_name": repo_name,
+                        "repo_name": sanitize_csv_cell(repo_name),
                         "issue_number": issue.get("number"),
-                        "title": issue.get("title"),
-                        "labels": ", ".join(lbl["name"] for lbl in issue.get("labels", [])),
+                        "title": sanitize_csv_cell(issue.get("title")),
+                        "labels": sanitize_csv_cell(", ".join(lbl["name"] for lbl in issue.get("labels", []))),
                     })
                     total_issues += 1
 
