@@ -15,18 +15,6 @@ TEMP_OUTPUT_FILE = Path("data/interim/issues.csv.tmp")
 REPO_NAME_REGEX = re.compile(r"^[a-zA-Z0-9._-]+$")
 
 
-def sanitize_csv_cell(value: object) -> object:
-    """
-    Sanitize values to prevent CSV formula injection (DDE attacks) in spreadsheet tools.
-
-    :param value: Cell value to sanitize.
-    :return: Sanitized cell value.
-    """
-    if isinstance(value, str) and value and value[0] in ("=", "+", "-", "@", "\t", "\r"):
-        return f"'{value}"
-    return value
-
-
 def handle_gh_error(repo_name: str, stderr: str) -> bool:
     """
     Handle GitHub CLI errors.
@@ -93,10 +81,10 @@ def main() -> None:
 
                 for issue in json.loads(result.stdout):
                     writer.writerow({
-                        "repo_name": sanitize_csv_cell(repo_name),
+                        "repo_name": repo_name,
                         "issue_number": issue.get("number"),
-                        "title": sanitize_csv_cell(issue.get("title")),
-                        "labels": sanitize_csv_cell(", ".join(lbl["name"] for lbl in issue.get("labels", []))),
+                        "title": issue.get("title", ""),
+                        "labels": ", ".join(lbl["name"] for lbl in issue.get("labels", [])),
                     })
                     total_issues += 1
 
