@@ -5,4 +5,4 @@ This is something I created out of frustration as I had too many open issue, loo
 
 This for now is a point in time snapshot viewer of all the work lying on my github.
 
-You can find the link to the dashboard here (currently not hosted.)
+You can find the link to the dashboard here: [asifdotexe.github.io/ghpm/](https://asifdotexe.github.io/ghpm/)
