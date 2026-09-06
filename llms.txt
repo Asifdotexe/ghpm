@@ -1,0 +1,17 @@
+# ghpm: birds eye view
+
+> High-level project capacity, workload distribution, and active backlog across GitHub repositories by Asifdotexe.
+
+ghpm is a serverless, static GitHub project management dashboard. It visualizes capacity, workload distribution, and open issues across repositories with minimal GitHub dark-mode aesthetics, RemoCN typography, and Monocharts.
+
+## Core Features
+- Birds-eye view of repository workload and backlog concentration
+- Workload tier distribution (Clear, Light, Moderate, Heavy)
+- Filterable repository matrix with search and label filtering
+- Serverless static deployment via GitHub Actions to GitHub Pages
+
+## URLs
+- [Live Dashboard](https://asifdotexe.github.io/ghpm/): Interactive dashboard interface
+- [Source Code](https://github.com/Asifdotexe/ghpm): Repository code, data pipeline, and automation
+- [Dataset](https://asifdotexe.github.io/ghpm/data/final/dashboard_data.json): Aggregated repository and backlog issue dataset
+- [Author](https://github.com/Asifdotexe): Asifdotexe profile

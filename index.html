@@ -6,28 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary SEO Meta Tags -->
-  <title>ghpm: birds eye view</title>
-  <meta name="title" content="ghpm: birds eye view" />
-  <meta name="description" content="High-level project capacity, workload distribution, and active backlog across GitHub repositories." />
+  <title>GHPM: GitHub Project Management &amp; Backlog Dashboard</title>
+  <meta name="title" content="GHPM: GitHub Project Management &amp; Backlog Dashboard" />
+  <meta name="description" content="Real-time GitHub project management dashboard. Track workload distribution, active backlogs, and repository capacity across your GitHub profile." />
   <meta name="keywords" content="github, project management, developer tools, dashboard, backlog, git, repo issues" />
   <meta name="author" content="Asifdotexe" />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0d1117" />
   <link rel="canonical" href="https://asifdotexe.github.io/ghpm/" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://asifdotexe.github.io/ghpm/sitemap.xml" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://asifdotexe.github.io/ghpm/" />
-  <meta property="og:title" content="ghpm: birds eye view" />
-  <meta property="og:description" content="High-level project capacity, workload distribution, and active backlog across GitHub repositories." />
+  <meta property="og:title" content="GHPM: GitHub Project Management &amp; Backlog Dashboard" />
+  <meta property="og:description" content="Real-time GitHub project management dashboard. Track workload distribution, active backlogs, and repository capacity across your GitHub profile." />
   <meta property="og:image" content="https://asifdotexe.github.io/ghpm/asset/og.webp" />
   <meta property="og:image:type" content="image/webp" />
-  <meta property="og:image:alt" content="ghpm dashboard birds-eye view preview" />
+  <meta property="og:image:alt" content="GHPM dashboard birds-eye view preview" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://asifdotexe.github.io/ghpm/" />
-  <meta name="twitter:title" content="ghpm: birds eye view" />
-  <meta name="twitter:description" content="High-level project capacity, workload distribution, and active backlog across GitHub repositories." />
+  <meta name="twitter:title" content="GHPM: GitHub Project Management &amp; Backlog Dashboard" />
+  <meta name="twitter:description" content="Real-time GitHub project management dashboard. Track workload distribution, active backlogs, and repository capacity across your GitHub profile." />
   <meta name="twitter:image" content="https://asifdotexe.github.io/ghpm/asset/og.webp" />
   <meta name="twitter:creator" content="@Asifdotexe" />
 
@@ -36,9 +38,9 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "ghpm: birds eye view",
+    "name": "GHPM: GitHub Project Management & Backlog Dashboard",
     "url": "https://asifdotexe.github.io/ghpm/",
-    "description": "High-level project capacity, workload distribution, and active backlog across GitHub repositories.",
+    "description": "Real-time GitHub project management dashboard. Track workload distribution, active backlogs, and repository capacity across your GitHub profile.",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "All",
     "author": {
@@ -134,7 +136,7 @@
   <header class="border-b border-gh-border bg-gh-panel/80 backdrop-blur sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <a href="https://github.com/Asifdotexe" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition" title="Open GitHub Profile">
+        <a href="https://github.com/Asifdotexe" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition" title="Open GitHub Profile" aria-label="GitHub Profile Asifdotexe">
           <svg class="h-6 w-6 text-white" viewBox="0 0 16 16" fill="currentColor">
             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
           </svg>
@@ -331,6 +333,7 @@
             <input
               type="text"
               id="search-input"
+              aria-label="Filter repositories or issues"
               oninput="handleSearch(this.value)"
               placeholder="Filter repo or issue (press /)..."
               class="w-64 bg-gh-dark border border-gh-border rounded-md px-3 py-1.5 text-xs text-gh-text placeholder-gh-subtext focus:outline-none focus:border-gh-blue font-mono"
@@ -341,7 +344,7 @@
       </div>
 
       <div class="overflow-x-auto">
-        <table class="w-full text-left border-collapse text-xs">
+        <table class="w-full text-left border-collapse text-xs" aria-label="Repository backlog matrix">
           <thead>
             <tr class="border-b border-gh-border bg-gh-dark/50 text-gh-subtext font-mono">
               <th class="py-3 px-4 font-medium">Repository</th>
