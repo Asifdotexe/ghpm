@@ -1,0 +1,55 @@
+name: Deploy Dashboard to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    # Runs daily at 00:00 UTC to keep issues/repos freshly synced
+    - cron: '0 0 * * *'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Fetch Repositories and Issues via GitHub CLI
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p data/interim
+          gh repo list --limit 150 --json name,description,updatedAt > data/interim/repos.json
+          python -c "import json, csv; data = json.load(open('data/interim/repos.json', encoding='utf-8')); keys = ['name', 'description', 'updatedAt']; writer = csv.DictWriter(open('data/interim/repos.csv', 'w', encoding='utf-8', newline=''), fieldnames=keys); writer.writeheader(); writer.writerows(data)"
+          uv run code/src/fetch_issues.py
+
+      - name: Build Dashboard & Inject Data
+        run: uv run code/src/build_dashboard.py
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

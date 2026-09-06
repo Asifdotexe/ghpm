@@ -17,12 +17,19 @@ if %errorlevel% neq 0 (
     exit /b %errorlevel%
 )
 
-echo [2/2] Running issue fetch script...
+echo [2/3] Running issue fetch script...
 uv run code/src/fetch_issues.py
 if %errorlevel% neq 0 (
     echo Error running fetch_issues.py.
     exit /b %errorlevel%
 )
 
-echo Done! Output saved to data\interim\issues.csv.
+echo [3/3] Compiling dashboard dataset and updating index.html...
+uv run code/src/build_dashboard.py
+if %errorlevel% neq 0 (
+    echo Error running build_dashboard.py.
+    exit /b %errorlevel%
+)
+
+echo Pipeline complete! View at index.html or data/final/dashboard_data.json.
 endlocal
