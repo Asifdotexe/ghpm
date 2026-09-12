@@ -1,9 +1,9 @@
-name: Monthly Dashboard Refresh (Open PR)
+name: Weekly Dashboard Refresh
 
 on:
   schedule:
-    # Runs at 00:00 UTC on the 1st of every month
-    - cron: '0 0 1 * *'
+    # Runs every Saturday at 00:00 UTC (12:00 midnight)
+    - cron: '0 0 * * 6'
   workflow_dispatch:
 
 permissions:
@@ -11,7 +11,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  monthly-refresh-pr:
+  weekly-refresh-pr:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -29,7 +29,7 @@ jobs:
         with:
           version: "0.6.14"
 
-      - name: Fetch Repositories and Issues via GitHub CLI
+      - name: Fetch repositories and issues via GitHub CLI
         env:
           GH_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
@@ -38,19 +38,20 @@ jobs:
           python -c "import json, csv; data = json.load(open('data/interim/repos.json', encoding='utf-8')); keys = ['name', 'description', 'updatedAt']; writer = csv.DictWriter(open('data/interim/repos.csv', 'w', encoding='utf-8', newline=''), fieldnames=keys); writer.writeheader(); writer.writerows(data)"
           uv run code/src/fetch_issues.py
 
-      - name: Rebuild Dashboard Dataset & HTML
+      - name: Build dashbord
         run: uv run code/src/build_dashboard.py
 
-      - name: Create Pull Request for Monthly Sync
+      - name: Create pull request
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(data): monthly snapshot refresh"
-          branch: "monthly-data-sync"
-          title: "chore(data): monthly dashboard refresh"
+          commit-message: "chore(data): weekly snapshot refresh"
+          branch: "weekly-data-sync"
+          title: "chore(data): weekly dashboard refresh"
+          labels: data-refresh
           body: |
-            ### Monthly Dashboard & Backlog Refresh
-            Automated monthly pull request generated on the 1st of the month.
+            ### Weekly Dashboard & Backlog Refresh
+            Automated weekly pull request generated every Saturday at midnight UTC.
             - Updates `data/interim/repos.csv` and `data/interim/issues.csv`
             - Compiles `data/final/dashboard_data.json`
             - Updates `index.html`
