@@ -1,46 +1,80 @@
 name,description,updatedAt
+ghpm,Github project management pipeline,2026-09-12T06:58:55Z
+second-brain,A personal knowledge base and second brain,2026-09-12T05:30:34Z
 journals,"Log book of my personal decision making, learnings and mistakes",2026-09-07T16:44:03Z
-ghpm,Github project management pipeline,2026-09-06T17:40:42Z
 benchmark-inflation-simulator,This project aims to make a very basic demonstration of how benchmark scores can be inflated without make the underlying model smarter,2026-09-05T06:10:00Z
+presentations,A repository to contains all the presentations I created,2026-08-29T10:54:27Z
 portfolio," Personal portfolio of Asif Sayyed, Data Science Specialist. A fast, statically generated website optimized for AI Search (GEO) and built with HTML, CSS, JS, and Python automation.",2026-08-05T20:08:42Z
 Theseus,Does a codebase remain the same if every line is replaced? A monthly pulse on software entropy.,2026-08-01T08:15:56Z
 DORA,"DORA (Data Oriented Report Automator) automates Exploratory Data Analysis (EDA) to help you effortlessly explore datasets. Generate insightful statistics, visualizations, and reports with just a click! Streamline your data exploration workflow and uncover trends, patterns, and relationships in your data with ease.",2026-08-17T16:37:16Z
 tram,Terminal Router for Agent Modules,2026-08-14T11:10:24Z
 skill-issue,Repository containing all the custom skill files made by me,2026-08-14T17:26:38Z
 Asifdotexe,,2026-08-04T07:21:23Z
+vent,"vent is a CLI and TUI tool designed to identify, collect, and explore developer frustrations across Reddit. By combining automated scraping, heuristic filtering, and an interactive terminal dashboard, vent helps you transform community noise into a structured pipeline of product insights.",2026-08-04T06:13:25Z
+cheek-syndicate,,2026-08-02T18:07:07Z
+imgtool,,2026-08-02T14:11:18Z
 getting-rusty,This is the learning repository to contain all the code I write while learning and understanding rust.,2026-07-28T08:15:50Z
+ubiquitous-goggles,ewoifslakhvdrklsjadsdfjsdafsjvdsa[adssfjdrsilfjdbkrjlsjdg,2026-07-31T12:37:48Z
 doh,Spark an argument. Realize you’re wrong. Say the word.,2026-07-31T10:50:07Z
 comply54,"African AI governance — runtime compliance enforcement for AI agents operating under NDPA, CBN, NIMC Act 2026, KDPA, POPIA and 15+ African regulations. LangGraph, CrewAI, and AutoGen adapters included.",2026-07-07T15:58:43Z
 yoink,"Yoink is a CLI tool and FastAPI backend that bundles, sanitizes, and visualizes codebases for Large Language Model (LLM) contexts. It optimizes token consumption by packing directories into structured Markdown while actively preventing compliance and security leaks.",2026-06-27T10:26:18Z
+test,,2026-06-18T12:15:24Z
+curly-octo-tribble,,2026-06-14T12:03:44Z
+viz,,2026-06-01T14:12:04Z
+WhatsNew,,2026-05-12T17:02:20Z
+adam-vs-muon-optimizer,"Comparing the Adam and Muon optimiser based on convergence scaling,  ",2026-04-24T15:45:23Z
+lexical-labyrinths,,2026-04-18T15:49:54Z
 rule-of-5-visualiser,A statistical visualizer for the Rule of Five heuristic.,2026-04-12T08:01:33Z
 claw-code,"The fastest repo in history to surpass 50K stars ⭐, reaching the milestone in just 2 hours after publication. Better Harness Tools that make real things done. Now writing in Rust using oh-my-codex.",2026-04-02T13:13:27Z
 MarkMyBench,Benchmarking random stuff,2026-02-01T05:16:45Z
+Hireoglyphics,The core idea is to create a python application that takes a user's LinkedIn profile and evaluates it against a set of best practices and calculates the Profile Strength score and provide actionable suggestions,2025-08-11T15:06:00Z
 Natural-LangWiz,Natural LangWiz is a repository for exploring Natural Language Processing (NLP) techniques through Jupyter notebooks. It covers everything from text preprocessing and sentiment analysis to advanced transformer models. Dive in to see how we turn raw text into actionable insights with a touch of NLP wizardry!,2026-05-06T19:35:30Z
 SERPENT,Syntactic Extraction and Rendering of Python’s End-to-end Node Trees,2026-02-11T07:36:42Z
 gen-cli,Gen-CLI is a Python-based tool to generate boilerplate code and framework templates for multiple programming languages.,2026-02-08T14:28:05Z
 RecommendationHaki,RecommendationHaki is a Python-based anime recommendation system that utilizes natural language processing (NLP) to suggest anime based on user preferences.,2026-02-22T18:31:50Z
 flowchart-library,Place to store mermaid code for flowcharts made for illustrations/visual aid,2026-02-07T15:24:51Z
+TenNine,Score the round before the bell.,2026-02-09T07:45:22Z
+song-to-karaoke,,2026-01-12T06:09:41Z
 open-see-wee,Repository for storing all my code written while playing around with and learning OpenCV,2026-02-07T15:31:34Z
+slide-automation,,2026-01-05T07:26:31Z
 WhatsTheSource,,2026-02-01T05:15:51Z
 LittleLogger,"A lightweight, zero-setup decorator for logging ML experiments to a JSONL file. This tool is for the solo data scientist, student, or hobbyist in a Jupyter Notebook who just wants to keep track of their experiments without setting up a database or heavy framework.",2026-02-09T07:45:25Z
 playground-repo,,2026-02-01T05:15:56Z
 PlateScribe,"PlatePaparazzi snaps license plates with the precision of a celebrity photographer! Using deep learning and OpenCV, this project detects and reads plates with OCR, perfect for enforcing laws and managing parking.",2026-02-07T15:33:16Z
+ACE,,2025-10-15T12:09:43Z
 trend-analysis,,2026-02-01T05:16:08Z
 real-estate-price-prediction,The objective of this project is to apply my knowledge of data science and machine learning to create a house price prediction model in a well documented fashion,2026-02-09T07:46:22Z
+naics-to-sic,Convert NAICS code to SIC equivalent,2025-09-29T05:49:24Z
+nothiphop,,2025-09-26T14:05:26Z
 StoDir,Stock direction forecasting model to forecast trends based on the closing price for each day,2026-02-07T15:35:37Z
+streamit-smoketester,"The goal of this app is to perform test on streamlit applications locally, so that it is less likely to fail when hosted",2025-09-10T07:51:44Z
+mba-python-course,The coursework aimed towards teaching Python to people from MBA background,2025-08-29T14:43:36Z
 PA-coco,A Simple Interactive Personal Assistant,2026-02-01T05:16:21Z
+reinventing-the-wheel,This is a repository aimed at learning concepts on a deeper level to enhance my understanding toward it,2025-07-29T15:12:23Z
 CodeCorsa,,2026-02-01T05:16:23Z
 student_dashboard,,2026-02-01T05:16:26Z
 VibeCheck,"A lightweight Streamlit app that uses a pre-trained DistilBERT model to analyze sentiment (Positive / Negative / Neutral) in any text, with confidence scores. Built with Hugging Face Transformers and PyTorch.",2026-02-01T05:16:26Z
+resume-matching-and-feedback-generation,Help job seekers improve their resume by matching them to a given job description and generate actionable suggestions.,2025-05-11T06:50:05Z
+UFC-Fighter-Stats,Scraped data from UFCStats.com,2025-04-12T08:28:28Z
 YoutubeCommentAnalysis,"A Python-based tool that analyzes comments from YouTube videos to provide audience sentiment insights. This tool fetches comments using the YouTube Data API, categorizes them as positive, negative, or neutral, and performs keyword analysis. Key insights are visualized through interactive dashboards built with Power BI or Streamlit.",2026-02-01T05:16:30Z
+CrimeMystery,,2025-03-25T02:24:24Z
 deep-learning,,2026-02-01T05:16:32Z
 30-days-with-streamlit,,2026-02-01T05:16:33Z
 healthcare-ai-project,,2026-02-01T05:16:38Z
+tree-logic-extractor,"Convert trained DecisionTree models into NumPy-based rules using np.where/np.select. Extract interpretable, efficient decision logic for quick evaluations. 🚀",2025-02-15T11:53:31Z
+home-loan-acquisition-modelling,"In this project, we will be modelling for a home loan acquisition problem",2025-02-09T09:54:35Z
 XLSX2PPTX,This tool converts excel file into PPTX,2026-02-01T05:16:57Z
 QuickVU,"Quick VU: No-code, data cleaning analysis and visualization tool built on Streamlit. Quickly clean, visualize, explore, and understand data relationships and correlations with ease. Perfect for analysts, business users, and anyone looking to gain data insights—without writing a single line of code.",2026-02-01T05:16:56Z
+ImplementStats,,2025-02-03T01:37:37Z
 perceptron-playground,"Implementing perceptron without using built in mathematical libraries like Numpy, Scikit-Learn and Scipy",2026-02-01T05:16:54Z
+finger-flow,"FingerFlow is an intuitive hand gesture tracking tool built with OpenCV and MediaPipe, allowing users to control and interact with digital interfaces using natural hand movements. Ideal for creating gesture-based applications, drawing tools, and more.",2025-01-25T14:20:58Z
+AskTube,"A Streamlit-based app that fetches YouTube video transcripts, processes them with NLP, and provides intelligent Q&A along with extended answers for an enhanced user experience.",2025-01-16T13:02:02Z
+Rec-it-Ralph,"A Streamlit-powered book recommendation system that uses clustering and machine learning to ""wreck"" the guesswork in finding your next great read. Discover personalized book suggestions tailored to your preferences, based on genres, themes, and patterns in massive book datasets!",2025-01-11T17:12:41Z
+FoxFeed,A real-time news aggregation and analysis platform that uses advanced NLP techniques to extract key insights from news articles.,2025-01-07T10:37:22Z
 customer-satisfaction,,2026-02-01T05:16:51Z
 MNISTify,"Handwritten digit recognition is crucial in computer vision, with applications in form digitization, automated data entry, and postal code recognition. This project uses a Convolutional Neural Network (CNN) trained on the MNIST dataset to accurately recognize digits. A Streamlit app allows users to upload images and view real-time predictions.",2026-02-01T05:16:49Z
+asifs-gitboard,My personal github dashboard,2024-12-16T11:27:07Z
+ResuMaze,,2024-12-15T10:59:38Z
 ThreadRace,Python 3.12 vs 3.13 Multithreading Benchmark,2026-02-01T05:18:10Z
 mumbai-property-price-prediction-model,The objective of this project is to apply my knowledge of data science and machine learning to create a house price prediction model in a well documented fashion,2026-02-01T05:18:09Z
 ScalaPlayground,"A repository to dump and share Scala code snippets, experiments, and practice exercises.",2026-02-01T05:18:05Z

@@ -1,7 +1,22 @@
 repo_name,issue_number,title,labels
+second-brain,195,Clean UI resource,feature-request
+second-brain,194,Ken thompson: Malicious code in compiler,feature-request
+second-brain,193,Read this article on package manager,feature-request
+second-brain,187,Learn about this,feature-request
+second-brain,185,css improvements,enhancement
+second-brain,178,ML Metrics,feature-request
+second-brain,177,Waldorf education system,feature-request
+second-brain,173,Dry vs Wet,feature-request
+second-brain,172,Evolutionary architecture,feature-request
+second-brain,170,Quantum entanglement or spooky action at a distance,feature-request
+second-brain,169,Add topic tile for business,feature-request
+second-brain,161,Write this somewhere,
+second-brain,160,Correction: Miscellaneous & Fun,bug
+second-brain,137,Notes from Inference Engineering,
+second-brain,102,User based accent selection,
+second-brain,95,[Bug] Fix notes,
 journals,17,add a copy button for any code snippet block,bug
 journals,12,implement SEO. AEO and GEO,enhancement
-ghpm,12,make it a weekly release,
 portfolio,135,Code snippet for public commits per day,"documentation, enhancement, good first issue, frontend"
 portfolio,134,consolidate project section and project pages,"documentation, enhancement, frontend"
 portfolio,133,project journaling routine development,"documentation, enhancement"
@@ -23,13 +38,18 @@ DORA,62,update text color for readability,enhancement
 DORA,46,add handling for UCI repository like kaggle,enhancement
 DORA,42,add custom color palette + dark mode,enhancement
 tram,1,"TRAM MVP (install, remove, list, check) using Python Standard Library",
+vent,1,implement praw when api key arrives,"enhancement, good first issue"
 getting-rusty,1,getting started with basics,documentation
 doh,22,more cybersecurity questions,add-questions
 doh,21,add myth busters,"enhancement, add-questions"
 yoink,6,brainstorm implementation into CLI tools,
+WhatsNew,12,adding new feeds,
+WhatsNew,7,Add logic to archive all the news on the yearly basis,
+lexical-labyrinths,1,set-up and mvp,
 rule-of-5-visualiser,3,implement visualisation,enhancement
 MarkMyBench,4,Traditional RAG vs PageIndex RAG,enhancement
 MarkMyBench,3,pandas vs polars,
+Hireoglyphics,9,mvp,enhancement
 Natural-LangWiz,50,Tidy up the project,enhancement
 Natural-LangWiz,49,Coreference Resolution,
 Natural-LangWiz,48,Dependency Parsing,
@@ -41,6 +61,9 @@ SERPENT,26,implement english to flow chart,enhancement
 RecommendationHaki,69,feat: improve description based recommendation,enhancement
 RecommendationHaki,68,feat: connect with MyAnimeList and similar platforms,enhancement
 RecommendationHaki,67,feat: add toggle for nsfw recommedation,enhancement
+TenNine,10,data-enrichment,enhancement
+TenNine,9,feature-engineering,enhancement
+song-to-karaoke,1,make the mvp,
 open-see-wee,40,Deployment,
 open-see-wee,39,Edge detection module,
 open-see-wee,38,Morphology module,
@@ -64,16 +87,31 @@ playground-repo,7,Explore sound based AI algorithms,test
 playground-repo,5,try ELI5,
 playground-repo,3,try pypalette,
 PlateScribe,20,enchaning the model output,
+ACE,19,add support for linkedin job post as JD?,"enhancement, v1.0.0"
+ACE,15,Add a time graph,"enhancement, v1.0.0"
+ACE,10,do something with the landing page,"enhancement, v1.0.0"
+ACE,9,benchmark gemini apis for the usecase,"enhancement, v1.0.0"
+ACE,8,implement NER?,"enhancement, v1.0.0"
 trend-analysis,1,smart-phone-ind-2025,
 StoDir,45,Use Cython for train.py,enhancement
 StoDir,43,data acquisition,
 StoDir,40,Portfolio Generalization,enhancement
+streamit-smoketester,1,setup the repository,enhancement
+mba-python-course,1,generate-introduction-module,
+reinventing-the-wheel,1,tokenizer,
 CodeCorsa,1,inital-prototype,enhancement
 VibeCheck,1,development,
+UFC-Fighter-Stats,1,scraper prototyping,
 deep-learning,8,ann-practice,
+tree-logic-extractor,5,implementing streamlit ui,enhancement
 QuickVU,30,improving the existing framework,
 QuickVU,29,model selection,
+finger-flow,1,hand tracking module,
+AskTube,1,development,enhancement
+Rec-it-Ralph,1,data wrangling,enhancement
+FoxFeed,1,set up,
 customer-satisfaction,8,deployment,
+ResuMaze,4,parsing and extraction,
 ThreadRace,3,fixing directory structure,
 monte-carlo-simulation,3,martingale strategy,
 AsiFunctions,9,formatting improvements,
