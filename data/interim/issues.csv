@@ -1,9 +1,17 @@
 repo_name,issue_number,title,labels
+portfolio,135,Code snippet for public commits per day,"documentation, enhancement, good first issue, frontend"
+portfolio,134,consolidate project section and project pages,"documentation, enhancement, frontend"
+portfolio,133,project journaling routine development,"documentation, enhancement"
+portfolio,127,add public speaking and educator optimisations,"enhancement, SEO"
+portfolio,122,Add doh to projects,"documentation, enhancement, good first issue"
+portfolio,105,implement radar graph for skills,enhancement
+second-brain,208,redo the graph,
+second-brain,207,Add notes about Xerox Effect,feature-request
+second-brain,205,modernize the UI,enhancement
 second-brain,195,Clean UI resource,feature-request
 second-brain,194,Ken thompson: Malicious code in compiler,feature-request
 second-brain,193,Read this article on package manager,feature-request
 second-brain,187,Learn about this,feature-request
-second-brain,185,css improvements,enhancement
 second-brain,178,ML Metrics,feature-request
 second-brain,177,Waldorf education system,feature-request
 second-brain,173,Dry vs Wet,feature-request
@@ -17,12 +25,6 @@ second-brain,102,User based accent selection,
 second-brain,95,[Bug] Fix notes,
 journals,17,add a copy button for any code snippet block,bug
 journals,12,implement SEO. AEO and GEO,enhancement
-portfolio,135,Code snippet for public commits per day,"documentation, enhancement, good first issue, frontend"
-portfolio,134,consolidate project section and project pages,"documentation, enhancement, frontend"
-portfolio,133,project journaling routine development,"documentation, enhancement"
-portfolio,127,add public speaking and educator optimisations,"enhancement, SEO"
-portfolio,122,Add doh to projects,"documentation, enhancement, good first issue"
-portfolio,105,implement radar graph for skills,enhancement
 Theseus,80,migrate to unittest,
 Theseus,79,css improvements,enhancement
 Theseus,76,ui feedback from regina,"enhancement, ui/ux"
