@@ -1,12 +1,13 @@
 name,description,updatedAt
-ghpm,Github project management pipeline,2026-09-12T06:58:55Z
-second-brain,A personal knowledge base and second brain,2026-09-12T05:30:34Z
+portfolio," Personal portfolio of Asif Sayyed, Data Science Specialist. A fast, statically generated website optimized for AI Search (GEO) and built with HTML, CSS, JS, and Python automation.",2026-09-13T13:49:43Z
+second-brain,A personal knowledge base and second brain,2026-09-18T07:26:56Z
+TrueML,"TrueML - a hackable machine learning library without ""model.fit()"". Built from first principles, you can see exactly what’s happening.",2026-09-14T13:01:19Z
+ghpm,Github project management pipeline,2026-09-12T07:00:36Z
 journals,"Log book of my personal decision making, learnings and mistakes",2026-09-07T16:44:03Z
 benchmark-inflation-simulator,This project aims to make a very basic demonstration of how benchmark scores can be inflated without make the underlying model smarter,2026-09-05T06:10:00Z
 presentations,A repository to contains all the presentations I created,2026-08-29T10:54:27Z
-portfolio," Personal portfolio of Asif Sayyed, Data Science Specialist. A fast, statically generated website optimized for AI Search (GEO) and built with HTML, CSS, JS, and Python automation.",2026-08-05T20:08:42Z
 Theseus,Does a codebase remain the same if every line is replaced? A monthly pulse on software entropy.,2026-08-01T08:15:56Z
-DORA,"DORA (Data Oriented Report Automator) automates Exploratory Data Analysis (EDA) to help you effortlessly explore datasets. Generate insightful statistics, visualizations, and reports with just a click! Streamline your data exploration workflow and uncover trends, patterns, and relationships in your data with ease.",2026-08-17T16:37:16Z
+DORA,"DORA (Data Oriented Report Automator) automates Exploratory Data Analysis (EDA) to help you effortlessly explore datasets. Generate insightful statistics, visualizations, and reports with just a click! Streamline your data exploration workflow and uncover trends, patterns, and relationships in your data with ease.",2026-09-13T05:02:50Z
 tram,Terminal Router for Agent Modules,2026-08-14T11:10:24Z
 skill-issue,Repository containing all the custom skill files made by me,2026-08-14T17:26:38Z
 Asifdotexe,,2026-08-04T07:21:23Z
