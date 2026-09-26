@@ -1,24 +1,26 @@
 name,description,updatedAt
 portfolio," Personal portfolio of Asif Sayyed, Data Science Specialist. A fast, statically generated website optimized for AI Search (GEO) and built with HTML, CSS, JS, and Python automation.",2026-09-13T13:49:43Z
-second-brain,A personal knowledge base and second brain,2026-09-18T07:26:56Z
+journals,"Log book of my personal decision making, learnings and mistakes",2026-09-23T17:47:56Z
+vent,"vent is a CLI and TUI tool designed to identify, collect, and explore developer frustrations across Reddit. By combining automated scraping, heuristic filtering, and an interactive terminal dashboard, vent helps you transform community noise into a structured pipeline of product insights.",2026-08-04T06:13:25Z
+tram,Terminal Router for Agent Modules,2026-08-14T11:10:24Z
+SERPENT,Syntactic Extraction and Rendering of Python’s End-to-end Node Trees,2026-02-11T07:36:42Z
+yoink,"Yoink is a CLI tool and FastAPI backend that bundles, sanitizes, and visualizes codebases for Large Language Model (LLM) contexts. It optimizes token consumption by packing directories into structured Markdown while actively preventing compliance and security leaks.",2026-06-27T10:26:18Z
+Natural-LangWiz,Natural LangWiz is a repository for exploring Natural Language Processing (NLP) techniques through Jupyter notebooks. It covers everything from text preprocessing and sentiment analysis to advanced transformer models. Dive in to see how we turn raw text into actionable insights with a touch of NLP wizardry!,2026-05-06T19:35:30Z
+DORA,"DORA (Data Oriented Report Automator) automates Exploratory Data Analysis (EDA) to help you effortlessly explore datasets. Generate insightful statistics, visualizations, and reports with just a click! Streamline your data exploration workflow and uncover trends, patterns, and relationships in your data with ease.",2026-09-13T05:02:50Z
+second-brain,A personal knowledge base and second brain,2026-09-20T17:00:59Z
+ghpm,Github project management pipeline,2026-09-19T11:20:09Z
 TrueML,"TrueML - a hackable machine learning library without ""model.fit()"". Built from first principles, you can see exactly what’s happening.",2026-09-14T13:01:19Z
-ghpm,Github project management pipeline,2026-09-12T07:00:36Z
-journals,"Log book of my personal decision making, learnings and mistakes",2026-09-07T16:44:03Z
 benchmark-inflation-simulator,This project aims to make a very basic demonstration of how benchmark scores can be inflated without make the underlying model smarter,2026-09-05T06:10:00Z
 presentations,A repository to contains all the presentations I created,2026-08-29T10:54:27Z
 Theseus,Does a codebase remain the same if every line is replaced? A monthly pulse on software entropy.,2026-08-01T08:15:56Z
-DORA,"DORA (Data Oriented Report Automator) automates Exploratory Data Analysis (EDA) to help you effortlessly explore datasets. Generate insightful statistics, visualizations, and reports with just a click! Streamline your data exploration workflow and uncover trends, patterns, and relationships in your data with ease.",2026-09-13T05:02:50Z
-tram,Terminal Router for Agent Modules,2026-08-14T11:10:24Z
 skill-issue,Repository containing all the custom skill files made by me,2026-08-14T17:26:38Z
 Asifdotexe,,2026-08-04T07:21:23Z
-vent,"vent is a CLI and TUI tool designed to identify, collect, and explore developer frustrations across Reddit. By combining automated scraping, heuristic filtering, and an interactive terminal dashboard, vent helps you transform community noise into a structured pipeline of product insights.",2026-08-04T06:13:25Z
 cheek-syndicate,,2026-08-02T18:07:07Z
 imgtool,,2026-08-02T14:11:18Z
 getting-rusty,This is the learning repository to contain all the code I write while learning and understanding rust.,2026-07-28T08:15:50Z
 ubiquitous-goggles,ewoifslakhvdrklsjadsdfjsdafsjvdsa[adssfjdrsilfjdbkrjlsjdg,2026-07-31T12:37:48Z
 doh,Spark an argument. Realize you’re wrong. Say the word.,2026-07-31T10:50:07Z
 comply54,"African AI governance — runtime compliance enforcement for AI agents operating under NDPA, CBN, NIMC Act 2026, KDPA, POPIA and 15+ African regulations. LangGraph, CrewAI, and AutoGen adapters included.",2026-07-07T15:58:43Z
-yoink,"Yoink is a CLI tool and FastAPI backend that bundles, sanitizes, and visualizes codebases for Large Language Model (LLM) contexts. It optimizes token consumption by packing directories into structured Markdown while actively preventing compliance and security leaks.",2026-06-27T10:26:18Z
 test,,2026-06-18T12:15:24Z
 curly-octo-tribble,,2026-06-14T12:03:44Z
 viz,,2026-06-01T14:12:04Z
@@ -29,8 +31,6 @@ rule-of-5-visualiser,A statistical visualizer for the Rule of Five heuristic.,20
 claw-code,"The fastest repo in history to surpass 50K stars ⭐, reaching the milestone in just 2 hours after publication. Better Harness Tools that make real things done. Now writing in Rust using oh-my-codex.",2026-04-02T13:13:27Z
 MarkMyBench,Benchmarking random stuff,2026-02-01T05:16:45Z
 Hireoglyphics,The core idea is to create a python application that takes a user's LinkedIn profile and evaluates it against a set of best practices and calculates the Profile Strength score and provide actionable suggestions,2025-08-11T15:06:00Z
-Natural-LangWiz,Natural LangWiz is a repository for exploring Natural Language Processing (NLP) techniques through Jupyter notebooks. It covers everything from text preprocessing and sentiment analysis to advanced transformer models. Dive in to see how we turn raw text into actionable insights with a touch of NLP wizardry!,2026-05-06T19:35:30Z
-SERPENT,Syntactic Extraction and Rendering of Python’s End-to-end Node Trees,2026-02-11T07:36:42Z
 gen-cli,Gen-CLI is a Python-based tool to generate boilerplate code and framework templates for multiple programming languages.,2026-02-08T14:28:05Z
 RecommendationHaki,RecommendationHaki is a Python-based anime recommendation system that utilizes natural language processing (NLP) to suggest anime based on user preferences.,2026-02-22T18:31:50Z
 flowchart-library,Place to store mermaid code for flowcharts made for illustrations/visual aid,2026-02-07T15:24:51Z
