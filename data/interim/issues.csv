@@ -5,9 +5,28 @@ portfolio,133,project journaling routine development,"documentation, enhancement
 portfolio,127,add public speaking and educator optimisations,"enhancement, SEO"
 portfolio,122,Add doh to projects,"documentation, enhancement, good first issue"
 portfolio,105,implement radar graph for skills,enhancement
-second-brain,208,redo the graph,
-second-brain,207,Add notes about Xerox Effect,feature-request
-second-brain,205,modernize the UI,enhancement
+journals,17,add a copy button for any code snippet block,bug
+journals,12,implement SEO. AEO and GEO,enhancement
+vent,1,implement praw when api key arrives,"enhancement, good first issue"
+tram,1,"TRAM MVP (install, remove, list, check) using Python Standard Library",
+SERPENT,31,make library that can explain a function it is passed onto,enhancement
+SERPENT,26,implement english to flow chart,enhancement
+yoink,6,brainstorm implementation into CLI tools,
+Natural-LangWiz,50,Tidy up the project,enhancement
+Natural-LangWiz,49,Coreference Resolution,
+Natural-LangWiz,48,Dependency Parsing,
+Natural-LangWiz,47,Fine-Tuning a Transformer Model,
+Natural-LangWiz,46,Relationship Extraction,
+Natural-LangWiz,45,Word Embeddings,
+DORA,71,streamlit app broke,bug
+DORA,70,improve tui,enhancement
+DORA,67,implement time series analysis,enhancement
+DORA,63,Update the demo website,enhancement
+DORA,62,update text color for readability,enhancement
+DORA,46,add handling for UCI repository like kaggle,enhancement
+DORA,42,add custom color palette + dark mode,enhancement
+second-brain,217,sss,
+second-brain,216,Japanese mooncake economy,feature-request
 second-brain,195,Clean UI resource,feature-request
 second-brain,194,Ken thompson: Malicious code in compiler,feature-request
 second-brain,193,Read this article on package manager,feature-request
@@ -23,8 +42,6 @@ second-brain,160,Correction: Miscellaneous & Fun,bug
 second-brain,137,Notes from Inference Engineering,
 second-brain,102,User based accent selection,
 second-brain,95,[Bug] Fix notes,
-journals,17,add a copy button for any code snippet block,bug
-journals,12,implement SEO. AEO and GEO,enhancement
 Theseus,80,migrate to unittest,
 Theseus,79,css improvements,enhancement
 Theseus,76,ui feedback from regina,"enhancement, ui/ux"
@@ -32,19 +49,9 @@ Theseus,75,make the ui responsive,"enhancement, ui/ux"
 Theseus,61,Try integrating bend,"enhancement, help wanted"
 Theseus,30,Star summary,
 Theseus,27,feat: support for local repository paths,enhancement
-DORA,71,streamlit app broke,bug
-DORA,70,improve tui,enhancement
-DORA,67,implement time series analysis,enhancement
-DORA,63,Update the demo website,enhancement
-DORA,62,update text color for readability,enhancement
-DORA,46,add handling for UCI repository like kaggle,enhancement
-DORA,42,add custom color palette + dark mode,enhancement
-tram,1,"TRAM MVP (install, remove, list, check) using Python Standard Library",
-vent,1,implement praw when api key arrives,"enhancement, good first issue"
 getting-rusty,1,getting started with basics,documentation
 doh,22,more cybersecurity questions,add-questions
 doh,21,add myth busters,"enhancement, add-questions"
-yoink,6,brainstorm implementation into CLI tools,
 WhatsNew,12,adding new feeds,
 WhatsNew,7,Add logic to archive all the news on the yearly basis,
 lexical-labyrinths,1,set-up and mvp,
@@ -52,14 +59,6 @@ rule-of-5-visualiser,3,implement visualisation,enhancement
 MarkMyBench,4,Traditional RAG vs PageIndex RAG,enhancement
 MarkMyBench,3,pandas vs polars,
 Hireoglyphics,9,mvp,enhancement
-Natural-LangWiz,50,Tidy up the project,enhancement
-Natural-LangWiz,49,Coreference Resolution,
-Natural-LangWiz,48,Dependency Parsing,
-Natural-LangWiz,47,Fine-Tuning a Transformer Model,
-Natural-LangWiz,46,Relationship Extraction,
-Natural-LangWiz,45,Word Embeddings,
-SERPENT,31,make library that can explain a function it is passed onto,enhancement
-SERPENT,26,implement english to flow chart,enhancement
 RecommendationHaki,69,feat: improve description based recommendation,enhancement
 RecommendationHaki,68,feat: connect with MyAnimeList and similar platforms,enhancement
 RecommendationHaki,67,feat: add toggle for nsfw recommedation,enhancement
@@ -89,11 +88,6 @@ playground-repo,7,Explore sound based AI algorithms,test
 playground-repo,5,try ELI5,
 playground-repo,3,try pypalette,
 PlateScribe,20,enchaning the model output,
-ACE,19,add support for linkedin job post as JD?,"enhancement, v1.0.0"
-ACE,15,Add a time graph,"enhancement, v1.0.0"
-ACE,10,do something with the landing page,"enhancement, v1.0.0"
-ACE,9,benchmark gemini apis for the usecase,"enhancement, v1.0.0"
-ACE,8,implement NER?,"enhancement, v1.0.0"
 trend-analysis,1,smart-phone-ind-2025,
 StoDir,45,Use Cython for train.py,enhancement
 StoDir,43,data acquisition,

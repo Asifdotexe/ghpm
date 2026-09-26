@@ -6,24 +6,54 @@
       "updatedAt": "2026-09-13T13:49:43Z"
     },
     {
+      "name": "journals",
+      "description": "Log book of my personal decision making, learnings and mistakes",
+      "updatedAt": "2026-09-23T17:47:56Z"
+    },
+    {
+      "name": "vent",
+      "description": "vent is a CLI and TUI tool designed to identify, collect, and explore developer frustrations across Reddit. By combining automated scraping, heuristic filtering, and an interactive terminal dashboard, vent helps you transform community noise into a structured pipeline of product insights.",
+      "updatedAt": "2026-08-04T06:13:25Z"
+    },
+    {
+      "name": "tram",
+      "description": "Terminal Router for Agent Modules",
+      "updatedAt": "2026-08-14T11:10:24Z"
+    },
+    {
+      "name": "SERPENT",
+      "description": "Syntactic Extraction and Rendering of Python\u2019s End-to-end Node Trees",
+      "updatedAt": "2026-02-11T07:36:42Z"
+    },
+    {
+      "name": "yoink",
+      "description": "Yoink is a CLI tool and FastAPI backend that bundles, sanitizes, and visualizes codebases for Large Language Model (LLM) contexts. It optimizes token consumption by packing directories into structured Markdown while actively preventing compliance and security leaks.",
+      "updatedAt": "2026-06-27T10:26:18Z"
+    },
+    {
+      "name": "Natural-LangWiz",
+      "description": "Natural LangWiz is a repository for exploring Natural Language Processing (NLP) techniques through Jupyter notebooks. It covers everything from text preprocessing and sentiment analysis to advanced transformer models. Dive in to see how we turn raw text into actionable insights with a touch of NLP wizardry!",
+      "updatedAt": "2026-05-06T19:35:30Z"
+    },
+    {
+      "name": "DORA",
+      "description": "DORA (Data Oriented Report Automator) automates Exploratory Data Analysis (EDA) to help you effortlessly explore datasets. Generate insightful statistics, visualizations, and reports with just a click! Streamline your data exploration workflow and uncover trends, patterns, and relationships in your data with ease.",
+      "updatedAt": "2026-09-13T05:02:50Z"
+    },
+    {
       "name": "second-brain",
       "description": "A personal knowledge base and second brain",
-      "updatedAt": "2026-09-18T07:26:56Z"
+      "updatedAt": "2026-09-20T17:00:59Z"
+    },
+    {
+      "name": "ghpm",
+      "description": "Github project management pipeline",
+      "updatedAt": "2026-09-19T11:20:09Z"
     },
     {
       "name": "TrueML",
       "description": "TrueML - a hackable machine learning library without \"model.fit()\". Built from first principles, you can see exactly what\u2019s happening.",
       "updatedAt": "2026-09-14T13:01:19Z"
-    },
-    {
-      "name": "ghpm",
-      "description": "Github project management pipeline",
-      "updatedAt": "2026-09-12T07:00:36Z"
-    },
-    {
-      "name": "journals",
-      "description": "Log book of my personal decision making, learnings and mistakes",
-      "updatedAt": "2026-09-07T16:44:03Z"
     },
     {
       "name": "benchmark-inflation-simulator",
@@ -41,16 +71,6 @@
       "updatedAt": "2026-08-01T08:15:56Z"
     },
     {
-      "name": "DORA",
-      "description": "DORA (Data Oriented Report Automator) automates Exploratory Data Analysis (EDA) to help you effortlessly explore datasets. Generate insightful statistics, visualizations, and reports with just a click! Streamline your data exploration workflow and uncover trends, patterns, and relationships in your data with ease.",
-      "updatedAt": "2026-09-13T05:02:50Z"
-    },
-    {
-      "name": "tram",
-      "description": "Terminal Router for Agent Modules",
-      "updatedAt": "2026-08-14T11:10:24Z"
-    },
-    {
       "name": "skill-issue",
       "description": "Repository containing all the custom skill files made by me",
       "updatedAt": "2026-08-14T17:26:38Z"
@@ -59,11 +79,6 @@
       "name": "Asifdotexe",
       "description": "",
       "updatedAt": "2026-08-04T07:21:23Z"
-    },
-    {
-      "name": "vent",
-      "description": "vent is a CLI and TUI tool designed to identify, collect, and explore developer frustrations across Reddit. By combining automated scraping, heuristic filtering, and an interactive terminal dashboard, vent helps you transform community noise into a structured pipeline of product insights.",
-      "updatedAt": "2026-08-04T06:13:25Z"
     },
     {
       "name": "cheek-syndicate",
@@ -94,11 +109,6 @@
       "name": "comply54",
       "description": "African AI governance \u2014 runtime compliance enforcement for AI agents operating under NDPA, CBN, NIMC Act 2026, KDPA, POPIA and 15+ African regulations. LangGraph, CrewAI, and AutoGen adapters included.",
       "updatedAt": "2026-07-07T15:58:43Z"
-    },
-    {
-      "name": "yoink",
-      "description": "Yoink is a CLI tool and FastAPI backend that bundles, sanitizes, and visualizes codebases for Large Language Model (LLM) contexts. It optimizes token consumption by packing directories into structured Markdown while actively preventing compliance and security leaks.",
-      "updatedAt": "2026-06-27T10:26:18Z"
     },
     {
       "name": "test",
@@ -149,16 +159,6 @@
       "name": "Hireoglyphics",
       "description": "The core idea is to create a python application that takes a user's LinkedIn profile and evaluates it against a set of best practices and calculates the Profile Strength score and provide actionable suggestions",
       "updatedAt": "2025-08-11T15:06:00Z"
-    },
-    {
-      "name": "Natural-LangWiz",
-      "description": "Natural LangWiz is a repository for exploring Natural Language Processing (NLP) techniques through Jupyter notebooks. It covers everything from text preprocessing and sentiment analysis to advanced transformer models. Dive in to see how we turn raw text into actionable insights with a touch of NLP wizardry!",
-      "updatedAt": "2026-05-06T19:35:30Z"
-    },
-    {
-      "name": "SERPENT",
-      "description": "Syntactic Extraction and Rendering of Python\u2019s End-to-end Node Trees",
-      "updatedAt": "2026-02-11T07:36:42Z"
     },
     {
       "name": "gen-cli",
@@ -544,22 +544,136 @@
       "labels": "enhancement"
     },
     {
+      "repo_name": "journals",
+      "issue_number": "17",
+      "title": "add a copy button for any code snippet block",
+      "labels": "bug"
+    },
+    {
+      "repo_name": "journals",
+      "issue_number": "12",
+      "title": "implement SEO. AEO and GEO",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "vent",
+      "issue_number": "1",
+      "title": "implement praw when api key arrives",
+      "labels": "enhancement, good first issue"
+    },
+    {
+      "repo_name": "tram",
+      "issue_number": "1",
+      "title": "TRAM MVP (install, remove, list, check) using Python Standard Library",
+      "labels": ""
+    },
+    {
+      "repo_name": "SERPENT",
+      "issue_number": "31",
+      "title": "make library that can explain a function it is passed onto",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "SERPENT",
+      "issue_number": "26",
+      "title": "implement english to flow chart",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "yoink",
+      "issue_number": "6",
+      "title": "brainstorm implementation into CLI tools",
+      "labels": ""
+    },
+    {
+      "repo_name": "Natural-LangWiz",
+      "issue_number": "50",
+      "title": "Tidy up the project",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "Natural-LangWiz",
+      "issue_number": "49",
+      "title": "Coreference Resolution",
+      "labels": ""
+    },
+    {
+      "repo_name": "Natural-LangWiz",
+      "issue_number": "48",
+      "title": "Dependency Parsing",
+      "labels": ""
+    },
+    {
+      "repo_name": "Natural-LangWiz",
+      "issue_number": "47",
+      "title": "Fine-Tuning a Transformer Model",
+      "labels": ""
+    },
+    {
+      "repo_name": "Natural-LangWiz",
+      "issue_number": "46",
+      "title": "Relationship Extraction",
+      "labels": ""
+    },
+    {
+      "repo_name": "Natural-LangWiz",
+      "issue_number": "45",
+      "title": "Word Embeddings",
+      "labels": ""
+    },
+    {
+      "repo_name": "DORA",
+      "issue_number": "71",
+      "title": "streamlit app broke",
+      "labels": "bug"
+    },
+    {
+      "repo_name": "DORA",
+      "issue_number": "70",
+      "title": "improve tui",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "DORA",
+      "issue_number": "67",
+      "title": "implement time series analysis",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "DORA",
+      "issue_number": "63",
+      "title": "Update the demo website",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "DORA",
+      "issue_number": "62",
+      "title": "update text color for readability",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "DORA",
+      "issue_number": "46",
+      "title": "add handling for UCI repository like kaggle",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "DORA",
+      "issue_number": "42",
+      "title": "add custom color palette + dark mode",
+      "labels": "enhancement"
+    },
+    {
       "repo_name": "second-brain",
-      "issue_number": "208",
-      "title": "redo the graph",
+      "issue_number": "217",
+      "title": "sss",
       "labels": ""
     },
     {
       "repo_name": "second-brain",
-      "issue_number": "207",
-      "title": "Add notes about Xerox Effect",
+      "issue_number": "216",
+      "title": "Japanese mooncake economy",
       "labels": "feature-request"
-    },
-    {
-      "repo_name": "second-brain",
-      "issue_number": "205",
-      "title": "modernize the UI",
-      "labels": "enhancement"
     },
     {
       "repo_name": "second-brain",
@@ -652,18 +766,6 @@
       "labels": ""
     },
     {
-      "repo_name": "journals",
-      "issue_number": "17",
-      "title": "add a copy button for any code snippet block",
-      "labels": "bug"
-    },
-    {
-      "repo_name": "journals",
-      "issue_number": "12",
-      "title": "implement SEO. AEO and GEO",
-      "labels": "enhancement"
-    },
-    {
       "repo_name": "Theseus",
       "issue_number": "80",
       "title": "migrate to unittest",
@@ -706,60 +808,6 @@
       "labels": "enhancement"
     },
     {
-      "repo_name": "DORA",
-      "issue_number": "71",
-      "title": "streamlit app broke",
-      "labels": "bug"
-    },
-    {
-      "repo_name": "DORA",
-      "issue_number": "70",
-      "title": "improve tui",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "DORA",
-      "issue_number": "67",
-      "title": "implement time series analysis",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "DORA",
-      "issue_number": "63",
-      "title": "Update the demo website",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "DORA",
-      "issue_number": "62",
-      "title": "update text color for readability",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "DORA",
-      "issue_number": "46",
-      "title": "add handling for UCI repository like kaggle",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "DORA",
-      "issue_number": "42",
-      "title": "add custom color palette + dark mode",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "tram",
-      "issue_number": "1",
-      "title": "TRAM MVP (install, remove, list, check) using Python Standard Library",
-      "labels": ""
-    },
-    {
-      "repo_name": "vent",
-      "issue_number": "1",
-      "title": "implement praw when api key arrives",
-      "labels": "enhancement, good first issue"
-    },
-    {
       "repo_name": "getting-rusty",
       "issue_number": "1",
       "title": "getting started with basics",
@@ -776,12 +824,6 @@
       "issue_number": "21",
       "title": "add myth busters",
       "labels": "enhancement, add-questions"
-    },
-    {
-      "repo_name": "yoink",
-      "issue_number": "6",
-      "title": "brainstorm implementation into CLI tools",
-      "labels": ""
     },
     {
       "repo_name": "WhatsNew",
@@ -823,54 +865,6 @@
       "repo_name": "Hireoglyphics",
       "issue_number": "9",
       "title": "mvp",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "Natural-LangWiz",
-      "issue_number": "50",
-      "title": "Tidy up the project",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "Natural-LangWiz",
-      "issue_number": "49",
-      "title": "Coreference Resolution",
-      "labels": ""
-    },
-    {
-      "repo_name": "Natural-LangWiz",
-      "issue_number": "48",
-      "title": "Dependency Parsing",
-      "labels": ""
-    },
-    {
-      "repo_name": "Natural-LangWiz",
-      "issue_number": "47",
-      "title": "Fine-Tuning a Transformer Model",
-      "labels": ""
-    },
-    {
-      "repo_name": "Natural-LangWiz",
-      "issue_number": "46",
-      "title": "Relationship Extraction",
-      "labels": ""
-    },
-    {
-      "repo_name": "Natural-LangWiz",
-      "issue_number": "45",
-      "title": "Word Embeddings",
-      "labels": ""
-    },
-    {
-      "repo_name": "SERPENT",
-      "issue_number": "31",
-      "title": "make library that can explain a function it is passed onto",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "SERPENT",
-      "issue_number": "26",
-      "title": "implement english to flow chart",
       "labels": "enhancement"
     },
     {
@@ -1046,36 +1040,6 @@
       "issue_number": "20",
       "title": "enchaning the model output",
       "labels": ""
-    },
-    {
-      "repo_name": "ACE",
-      "issue_number": "19",
-      "title": "add support for linkedin job post as JD?",
-      "labels": "enhancement, v1.0.0"
-    },
-    {
-      "repo_name": "ACE",
-      "issue_number": "15",
-      "title": "Add a time graph",
-      "labels": "enhancement, v1.0.0"
-    },
-    {
-      "repo_name": "ACE",
-      "issue_number": "10",
-      "title": "do something with the landing page",
-      "labels": "enhancement, v1.0.0"
-    },
-    {
-      "repo_name": "ACE",
-      "issue_number": "9",
-      "title": "benchmark gemini apis for the usecase",
-      "labels": "enhancement, v1.0.0"
-    },
-    {
-      "repo_name": "ACE",
-      "issue_number": "8",
-      "title": "implement NER?",
-      "labels": "enhancement, v1.0.0"
     },
     {
       "repo_name": "trend-analysis",
