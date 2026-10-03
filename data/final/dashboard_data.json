@@ -3,7 +3,22 @@
     {
       "name": "portfolio",
       "description": " Personal portfolio of Asif Sayyed, Data Science Specialist. A fast, statically generated website optimized for AI Search (GEO) and built with HTML, CSS, JS, and Python automation.",
-      "updatedAt": "2026-09-13T13:49:43Z"
+      "updatedAt": "2026-09-26T09:56:34Z"
+    },
+    {
+      "name": "Elenchus",
+      "description": "Elenchus is an offline debate analysis and fallacy detection engine designed for live conversations and recorded speech.",
+      "updatedAt": "2026-09-30T09:37:19Z"
+    },
+    {
+      "name": "second-brain",
+      "description": "A personal knowledge base and second brain",
+      "updatedAt": "2026-09-26T13:08:54Z"
+    },
+    {
+      "name": "ghpm",
+      "description": "Github project management pipeline",
+      "updatedAt": "2026-09-26T16:32:12Z"
     },
     {
       "name": "journals",
@@ -38,17 +53,7 @@
     {
       "name": "DORA",
       "description": "DORA (Data Oriented Report Automator) automates Exploratory Data Analysis (EDA) to help you effortlessly explore datasets. Generate insightful statistics, visualizations, and reports with just a click! Streamline your data exploration workflow and uncover trends, patterns, and relationships in your data with ease.",
-      "updatedAt": "2026-09-13T05:02:50Z"
-    },
-    {
-      "name": "second-brain",
-      "description": "A personal knowledge base and second brain",
-      "updatedAt": "2026-09-20T17:00:59Z"
-    },
-    {
-      "name": "ghpm",
-      "description": "Github project management pipeline",
-      "updatedAt": "2026-09-19T11:20:09Z"
+      "updatedAt": "2026-10-02T12:38:40Z"
     },
     {
       "name": "TrueML",
@@ -515,27 +520,9 @@
     },
     {
       "repo_name": "portfolio",
-      "issue_number": "134",
-      "title": "consolidate project section and project pages",
-      "labels": "documentation, enhancement, frontend"
-    },
-    {
-      "repo_name": "portfolio",
-      "issue_number": "133",
-      "title": "project journaling routine development",
-      "labels": "documentation, enhancement"
-    },
-    {
-      "repo_name": "portfolio",
       "issue_number": "127",
       "title": "add public speaking and educator optimisations",
       "labels": "enhancement, SEO"
-    },
-    {
-      "repo_name": "portfolio",
-      "issue_number": "122",
-      "title": "Add doh to projects",
-      "labels": "documentation, enhancement, good first issue"
     },
     {
       "repo_name": "portfolio",
@@ -544,135 +531,39 @@
       "labels": "enhancement"
     },
     {
-      "repo_name": "journals",
-      "issue_number": "17",
-      "title": "add a copy button for any code snippet block",
-      "labels": "bug"
-    },
-    {
-      "repo_name": "journals",
-      "issue_number": "12",
-      "title": "implement SEO. AEO and GEO",
+      "repo_name": "Elenchus",
+      "issue_number": "7",
+      "title": "add functionality to hear external audio",
       "labels": "enhancement"
     },
     {
-      "repo_name": "vent",
-      "issue_number": "1",
-      "title": "implement praw when api key arrives",
-      "labels": "enhancement, good first issue"
-    },
-    {
-      "repo_name": "tram",
-      "issue_number": "1",
-      "title": "TRAM MVP (install, remove, list, check) using Python Standard Library",
-      "labels": ""
-    },
-    {
-      "repo_name": "SERPENT",
-      "issue_number": "31",
-      "title": "make library that can explain a function it is passed onto",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "SERPENT",
-      "issue_number": "26",
-      "title": "implement english to flow chart",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "yoink",
+      "repo_name": "Elenchus",
       "issue_number": "6",
-      "title": "brainstorm implementation into CLI tools",
-      "labels": ""
-    },
-    {
-      "repo_name": "Natural-LangWiz",
-      "issue_number": "50",
-      "title": "Tidy up the project",
+      "title": "make website",
       "labels": "enhancement"
     },
     {
-      "repo_name": "Natural-LangWiz",
-      "issue_number": "49",
-      "title": "Coreference Resolution",
-      "labels": ""
-    },
-    {
-      "repo_name": "Natural-LangWiz",
-      "issue_number": "48",
-      "title": "Dependency Parsing",
-      "labels": ""
-    },
-    {
-      "repo_name": "Natural-LangWiz",
-      "issue_number": "47",
-      "title": "Fine-Tuning a Transformer Model",
-      "labels": ""
-    },
-    {
-      "repo_name": "Natural-LangWiz",
-      "issue_number": "46",
-      "title": "Relationship Extraction",
-      "labels": ""
-    },
-    {
-      "repo_name": "Natural-LangWiz",
-      "issue_number": "45",
-      "title": "Word Embeddings",
-      "labels": ""
-    },
-    {
-      "repo_name": "DORA",
-      "issue_number": "71",
-      "title": "streamlit app broke",
-      "labels": "bug"
-    },
-    {
-      "repo_name": "DORA",
-      "issue_number": "70",
-      "title": "improve tui",
+      "repo_name": "Elenchus",
+      "issue_number": "5",
+      "title": "make precompiled binaries",
       "labels": "enhancement"
     },
     {
-      "repo_name": "DORA",
-      "issue_number": "67",
-      "title": "implement time series analysis",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "DORA",
-      "issue_number": "63",
-      "title": "Update the demo website",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "DORA",
-      "issue_number": "62",
-      "title": "update text color for readability",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "DORA",
-      "issue_number": "46",
-      "title": "add handling for UCI repository like kaggle",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "DORA",
-      "issue_number": "42",
-      "title": "add custom color palette + dark mode",
+      "repo_name": "Elenchus",
+      "issue_number": "3",
+      "title": "UI version improvements",
       "labels": "enhancement"
     },
     {
       "repo_name": "second-brain",
-      "issue_number": "217",
-      "title": "sss",
-      "labels": ""
+      "issue_number": "222",
+      "title": "Logo design skill",
+      "labels": "feature-request"
     },
     {
       "repo_name": "second-brain",
-      "issue_number": "216",
-      "title": "Japanese mooncake economy",
+      "issue_number": "219",
+      "title": "Quantum biology",
       "labels": "feature-request"
     },
     {
@@ -764,6 +655,132 @@
       "issue_number": "95",
       "title": "[Bug] Fix notes",
       "labels": ""
+    },
+    {
+      "repo_name": "journals",
+      "issue_number": "17",
+      "title": "add a copy button for any code snippet block",
+      "labels": "bug"
+    },
+    {
+      "repo_name": "journals",
+      "issue_number": "12",
+      "title": "implement SEO. AEO and GEO",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "vent",
+      "issue_number": "1",
+      "title": "implement praw when api key arrives",
+      "labels": "enhancement, good first issue"
+    },
+    {
+      "repo_name": "tram",
+      "issue_number": "1",
+      "title": "TRAM MVP (install, remove, list, check) using Python Standard Library",
+      "labels": ""
+    },
+    {
+      "repo_name": "SERPENT",
+      "issue_number": "31",
+      "title": "make library that can explain a function it is passed onto",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "SERPENT",
+      "issue_number": "26",
+      "title": "implement english to flow chart",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "yoink",
+      "issue_number": "17",
+      "title": "ModuleNotFoundError: No module named 'yoink'",
+      "labels": "bug"
+    },
+    {
+      "repo_name": "yoink",
+      "issue_number": "6",
+      "title": "brainstorm implementation into CLI tools",
+      "labels": ""
+    },
+    {
+      "repo_name": "Natural-LangWiz",
+      "issue_number": "50",
+      "title": "Tidy up the project",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "Natural-LangWiz",
+      "issue_number": "49",
+      "title": "Coreference Resolution",
+      "labels": ""
+    },
+    {
+      "repo_name": "Natural-LangWiz",
+      "issue_number": "48",
+      "title": "Dependency Parsing",
+      "labels": ""
+    },
+    {
+      "repo_name": "Natural-LangWiz",
+      "issue_number": "47",
+      "title": "Fine-Tuning a Transformer Model",
+      "labels": ""
+    },
+    {
+      "repo_name": "Natural-LangWiz",
+      "issue_number": "46",
+      "title": "Relationship Extraction",
+      "labels": ""
+    },
+    {
+      "repo_name": "Natural-LangWiz",
+      "issue_number": "45",
+      "title": "Word Embeddings",
+      "labels": ""
+    },
+    {
+      "repo_name": "DORA",
+      "issue_number": "71",
+      "title": "streamlit app broke",
+      "labels": "bug"
+    },
+    {
+      "repo_name": "DORA",
+      "issue_number": "70",
+      "title": "improve tui",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "DORA",
+      "issue_number": "67",
+      "title": "implement time series analysis",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "DORA",
+      "issue_number": "63",
+      "title": "Update the demo website",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "DORA",
+      "issue_number": "62",
+      "title": "update text color for readability",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "DORA",
+      "issue_number": "46",
+      "title": "add handling for UCI repository like kaggle",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "DORA",
+      "issue_number": "42",
+      "title": "add custom color palette + dark mode",
+      "labels": "enhancement"
     },
     {
       "repo_name": "Theseus",
@@ -968,6 +985,12 @@
       "issue_number": "22",
       "title": "Test if we support GridSearch and things like \"Multithreading\" / \"Multiprocessing\"",
       "labels": "documentation"
+    },
+    {
+      "repo_name": "playground-repo",
+      "issue_number": "21",
+      "title": "Learn and understand lean programming",
+      "labels": ""
     },
     {
       "repo_name": "playground-repo",

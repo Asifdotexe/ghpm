@@ -1,32 +1,13 @@
 repo_name,issue_number,title,labels
 portfolio,135,Code snippet for public commits per day,"documentation, enhancement, good first issue, frontend"
-portfolio,134,consolidate project section and project pages,"documentation, enhancement, frontend"
-portfolio,133,project journaling routine development,"documentation, enhancement"
 portfolio,127,add public speaking and educator optimisations,"enhancement, SEO"
-portfolio,122,Add doh to projects,"documentation, enhancement, good first issue"
 portfolio,105,implement radar graph for skills,enhancement
-journals,17,add a copy button for any code snippet block,bug
-journals,12,implement SEO. AEO and GEO,enhancement
-vent,1,implement praw when api key arrives,"enhancement, good first issue"
-tram,1,"TRAM MVP (install, remove, list, check) using Python Standard Library",
-SERPENT,31,make library that can explain a function it is passed onto,enhancement
-SERPENT,26,implement english to flow chart,enhancement
-yoink,6,brainstorm implementation into CLI tools,
-Natural-LangWiz,50,Tidy up the project,enhancement
-Natural-LangWiz,49,Coreference Resolution,
-Natural-LangWiz,48,Dependency Parsing,
-Natural-LangWiz,47,Fine-Tuning a Transformer Model,
-Natural-LangWiz,46,Relationship Extraction,
-Natural-LangWiz,45,Word Embeddings,
-DORA,71,streamlit app broke,bug
-DORA,70,improve tui,enhancement
-DORA,67,implement time series analysis,enhancement
-DORA,63,Update the demo website,enhancement
-DORA,62,update text color for readability,enhancement
-DORA,46,add handling for UCI repository like kaggle,enhancement
-DORA,42,add custom color palette + dark mode,enhancement
-second-brain,217,sss,
-second-brain,216,Japanese mooncake economy,feature-request
+Elenchus,7,add functionality to hear external audio,enhancement
+Elenchus,6,make website,enhancement
+Elenchus,5,make precompiled binaries,enhancement
+Elenchus,3,UI version improvements,enhancement
+second-brain,222,Logo design skill,feature-request
+second-brain,219,Quantum biology,feature-request
 second-brain,195,Clean UI resource,feature-request
 second-brain,194,Ken thompson: Malicious code in compiler,feature-request
 second-brain,193,Read this article on package manager,feature-request
@@ -42,6 +23,27 @@ second-brain,160,Correction: Miscellaneous & Fun,bug
 second-brain,137,Notes from Inference Engineering,
 second-brain,102,User based accent selection,
 second-brain,95,[Bug] Fix notes,
+journals,17,add a copy button for any code snippet block,bug
+journals,12,implement SEO. AEO and GEO,enhancement
+vent,1,implement praw when api key arrives,"enhancement, good first issue"
+tram,1,"TRAM MVP (install, remove, list, check) using Python Standard Library",
+SERPENT,31,make library that can explain a function it is passed onto,enhancement
+SERPENT,26,implement english to flow chart,enhancement
+yoink,17,ModuleNotFoundError: No module named 'yoink',bug
+yoink,6,brainstorm implementation into CLI tools,
+Natural-LangWiz,50,Tidy up the project,enhancement
+Natural-LangWiz,49,Coreference Resolution,
+Natural-LangWiz,48,Dependency Parsing,
+Natural-LangWiz,47,Fine-Tuning a Transformer Model,
+Natural-LangWiz,46,Relationship Extraction,
+Natural-LangWiz,45,Word Embeddings,
+DORA,71,streamlit app broke,bug
+DORA,70,improve tui,enhancement
+DORA,67,implement time series analysis,enhancement
+DORA,63,Update the demo website,enhancement
+DORA,62,update text color for readability,enhancement
+DORA,46,add handling for UCI repository like kaggle,enhancement
+DORA,42,add custom color palette + dark mode,enhancement
 Theseus,80,migrate to unittest,
 Theseus,79,css improvements,enhancement
 Theseus,76,ui feedback from regina,"enhancement, ui/ux"
@@ -76,6 +78,7 @@ open-see-wee,31,Add argparser support,
 WhatsTheSource,4,Add the title to the result,
 WhatsTheSource,3,Making the MVP,
 LittleLogger,22,"Test if we support GridSearch and things like ""Multithreading"" / ""Multiprocessing""",documentation
+playground-repo,21,Learn and understand lean programming,
 playground-repo,20,Play around with RShiny,
 playground-repo,16,Play around with Numba,
 playground-repo,15,Explore PyPy interpreter,
