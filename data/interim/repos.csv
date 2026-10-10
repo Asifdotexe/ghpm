@@ -1,15 +1,17 @@
 name,description,updatedAt
 portfolio," Personal portfolio of Asif Sayyed, Data Science Specialist. A fast, statically generated website optimized for AI Search (GEO) and built with HTML, CSS, JS, and Python automation.",2026-09-26T09:56:34Z
-Elenchus,Elenchus is an offline debate analysis and fallacy detection engine designed for live conversations and recorded speech.,2026-09-30T09:37:19Z
-second-brain,A personal knowledge base and second brain,2026-09-26T13:08:54Z
-ghpm,Github project management pipeline,2026-09-26T16:32:12Z
+backpocket,Some scripts that I'd like to keep in my backpocket,2026-10-07T09:04:13Z
+comply54,"African AI governance — runtime compliance enforcement for AI agents operating under NDPA, CBN, NIMC Act 2026, KDPA, POPIA and 15+ African regulations. LangGraph, CrewAI, and AutoGen adapters included.",2026-10-04T11:57:20Z
+Elenchus,Elenchus is an offline debate analysis and fallacy detection engine designed for live conversations and recorded speech.,2026-10-03T09:23:09Z
+second-brain,A personal knowledge base and second brain,2026-10-03T06:02:05Z
+ghpm,Github project management pipeline,2026-10-03T06:02:46Z
 journals,"Log book of my personal decision making, learnings and mistakes",2026-09-23T17:47:56Z
 vent,"vent is a CLI and TUI tool designed to identify, collect, and explore developer frustrations across Reddit. By combining automated scraping, heuristic filtering, and an interactive terminal dashboard, vent helps you transform community noise into a structured pipeline of product insights.",2026-08-04T06:13:25Z
 tram,Terminal Router for Agent Modules,2026-08-14T11:10:24Z
 SERPENT,Syntactic Extraction and Rendering of Python’s End-to-end Node Trees,2026-02-11T07:36:42Z
 yoink,"Yoink is a CLI tool and FastAPI backend that bundles, sanitizes, and visualizes codebases for Large Language Model (LLM) contexts. It optimizes token consumption by packing directories into structured Markdown while actively preventing compliance and security leaks.",2026-06-27T10:26:18Z
 Natural-LangWiz,Natural LangWiz is a repository for exploring Natural Language Processing (NLP) techniques through Jupyter notebooks. It covers everything from text preprocessing and sentiment analysis to advanced transformer models. Dive in to see how we turn raw text into actionable insights with a touch of NLP wizardry!,2026-05-06T19:35:30Z
-DORA,"DORA (Data Oriented Report Automator) automates Exploratory Data Analysis (EDA) to help you effortlessly explore datasets. Generate insightful statistics, visualizations, and reports with just a click! Streamline your data exploration workflow and uncover trends, patterns, and relationships in your data with ease.",2026-10-02T12:38:40Z
+DORA,"DORA (Data Oriented Report Automator) automates Exploratory Data Analysis (EDA) to help you effortlessly explore datasets. Generate insightful statistics, visualizations, and reports with just a click! Streamline your data exploration workflow and uncover trends, patterns, and relationships in your data with ease.",2026-10-09T17:41:23Z
 TrueML,"TrueML - a hackable machine learning library without ""model.fit()"". Built from first principles, you can see exactly what’s happening.",2026-09-14T13:01:19Z
 benchmark-inflation-simulator,This project aims to make a very basic demonstration of how benchmark scores can be inflated without make the underlying model smarter,2026-09-05T06:10:00Z
 presentations,A repository to contains all the presentations I created,2026-08-29T10:54:27Z
@@ -21,7 +23,6 @@ imgtool,,2026-08-02T14:11:18Z
 getting-rusty,This is the learning repository to contain all the code I write while learning and understanding rust.,2026-07-28T08:15:50Z
 ubiquitous-goggles,ewoifslakhvdrklsjadsdfjsdafsjvdsa[adssfjdrsilfjdbkrjlsjdg,2026-07-31T12:37:48Z
 doh,Spark an argument. Realize you’re wrong. Say the word.,2026-07-31T10:50:07Z
-comply54,"African AI governance — runtime compliance enforcement for AI agents operating under NDPA, CBN, NIMC Act 2026, KDPA, POPIA and 15+ African regulations. LangGraph, CrewAI, and AutoGen adapters included.",2026-07-07T15:58:43Z
 test,,2026-06-18T12:15:24Z
 curly-octo-tribble,,2026-06-14T12:03:44Z
 viz,,2026-06-01T14:12:04Z
