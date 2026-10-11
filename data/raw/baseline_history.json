@@ -1,6 +1,7 @@
 [
   {
     "date": "2026-09-12",
+    "iso_week": "2026-W37",
     "total_repos": 100,
     "total_issues": 116,
     "active_repos": 46,
@@ -11,6 +12,7 @@
   },
   {
     "date": "2026-09-19",
+    "iso_week": "2026-W38",
     "total_repos": 101,
     "total_issues": 118,
     "active_repos": 46,
@@ -21,6 +23,7 @@
   },
   {
     "date": "2026-09-26",
+    "iso_week": "2026-W39",
     "total_repos": 101,
     "total_issues": 112,
     "active_repos": 45,
@@ -31,6 +34,7 @@
   },
   {
     "date": "2026-10-03",
+    "iso_week": "2026-W40",
     "total_repos": 102,
     "total_issues": 115,
     "active_repos": 46,
@@ -41,6 +45,7 @@
   },
   {
     "date": "2026-10-10",
+    "iso_week": "2026-W41",
     "total_repos": 103,
     "total_issues": 113,
     "active_repos": 48,

@@ -18,7 +18,11 @@ def update_history(repos: list[dict], issues: list[dict]) -> list[dict]:
     Update or append weekly metrics snapshot to data/final/history.json.
     Computes delta of opened and closed issues compared to previous snapshot.
     """
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    today_dt = datetime.now(timezone.utc)
+    today = today_dt.strftime("%Y-%m-%d")
+    iso_year, iso_week_num, _ = today_dt.isocalendar()
+    iso_week = f"{iso_year}-W{iso_week_num:02d}"
+
     source = HISTORY_JSON if HISTORY_JSON.exists() else BASELINE_JSON
     history = json.loads(source.read_text(encoding="utf-8")) if source.exists() else []
 
@@ -47,24 +51,17 @@ def update_history(repos: list[dict], issues: list[dict]) -> list[dict]:
     top5_sum = sum(counts[:5])
     conc_pct = round((top5_sum / total_issues * 100), 1) if total_issues > 0 else 0.0
 
-    existing_entry = next((e for e in history if e.get("date") == today), None)
-    if not existing_entry and history:
-        try:
-            last_date = datetime.strptime(history[-1].get("date"), "%Y-%m-%d").replace(tzinfo=timezone.utc)
-            curr_date = datetime.strptime(today, "%Y-%m-%d").replace(tzinfo=timezone.utc)
-            if (curr_date - last_date).days < 6:
-                existing_entry = history[-1]
-        except Exception:
-            pass
-
+    existing_entry = next((e for e in history if e.get("iso_week") == iso_week), None)
     if not existing_entry:
-        existing_entry = {"date": today}
+        existing_entry = {"date": today, "iso_week": iso_week}
         history.append(existing_entry)
     elif opened == 0 and closed == 0:
         opened = existing_entry.get("opened", 0)
         closed = existing_entry.get("closed", 0)
 
     existing_entry.update({
+        "date": today,
+        "iso_week": iso_week,
         "total_repos": total_repos,
         "total_issues": total_issues,
         "active_repos": active_repos,
