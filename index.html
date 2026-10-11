@@ -270,17 +270,24 @@
       </div>
     </div>
 
-    <!-- Weekly Issue Velocity (Opened vs Closed per week) -->
+    <!-- Issue Velocity (Opened vs Closed turnover) -->
     <div class="p-5 rounded-lg bg-gh-panel border border-gh-border space-y-4">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-gh-border pb-3">
         <div>
           <h2 class="text-sm font-semibold text-white flex items-center gap-2">
-            Weekly Issue Velocity
+            Issue Velocity
             <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-gh-badge text-gh-subtext border border-gh-border">Opened vs Closed</span>
           </h2>
-          <p class="text-xs text-gh-subtext">Historical weekly turnover and backlog burn rate across repositories</p>
+          <p class="text-xs text-gh-subtext">Historical turnover and backlog burn rate across repositories</p>
         </div>
-        <div class="flex items-center gap-4 text-xs font-mono">
+        <div class="flex flex-wrap items-center gap-3 text-xs font-mono">
+          <!-- Rollup / Drilldown Segmented Pills -->
+          <div class="inline-flex rounded-md p-0.5 bg-gh-dark border border-gh-border text-xs" role="group">
+            <button type="button" id="vel-btn-weeks" onclick="setVelocityGranularity('weeks')" class="vel-gran-btn text-xs px-2.5 py-1 rounded font-medium border-0 bg-gh-border text-white hover:text-white transition">Weeks</button>
+            <button type="button" id="vel-btn-months" onclick="setVelocityGranularity('months')" class="vel-gran-btn text-xs px-2.5 py-1 rounded font-medium border-0 bg-gh-panel text-gh-subtext hover:text-white transition">Months</button>
+            <button type="button" id="vel-btn-quarters" onclick="setVelocityGranularity('quarters')" class="vel-gran-btn text-xs px-2.5 py-1 rounded font-medium border-0 bg-gh-panel text-gh-subtext hover:text-white transition">Quarters</button>
+            <button type="button" id="vel-btn-years" onclick="setVelocityGranularity('years')" class="vel-gran-btn text-xs px-2.5 py-1 rounded font-medium border-0 bg-gh-panel text-gh-subtext hover:text-white transition">Years</button>
+          </div>
           <div class="flex items-center gap-1.5">
             <span class="w-2.5 h-2.5 rounded-sm bg-gh-blue"></span>
             <span class="text-gh-subtext">Opened</span>
@@ -445,6 +452,98 @@
       el.innerHTML = `<span>${arrow}</span><span>${sign}${formattedVal}</span>`;
     }
 
+    let currentVelocityGranularity = 'weeks';
+
+    function aggregateVelocityData(history, granularity = 'weeks') {
+      if (!history || history.length === 0) return [];
+
+      if (granularity === 'weeks') {
+        return history.slice(-8).map(d => {
+          let label = d.date;
+          try {
+            label = new Date(d.date + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+          } catch (_) {}
+          const weekTag = d.iso_week ? d.iso_week.split('-')[1] : '';
+          return {
+            key: d.iso_week || d.date,
+            label: weekTag ? `${label} (${weekTag})` : label,
+            tooltipLabel: `Week ${d.iso_week || d.date}`,
+            opened: d.opened || 0,
+            closed: d.closed || 0
+          };
+        });
+      }
+
+      if (granularity === 'months') {
+        const groups = {};
+        history.forEach(d => {
+          const mKey = d.date.slice(0, 7);
+          if (!groups[mKey]) groups[mKey] = { opened: 0, closed: 0 };
+          groups[mKey].opened += (d.opened || 0);
+          groups[mKey].closed += (d.closed || 0);
+        });
+
+        return Object.entries(groups).slice(-12).map(([mKey, val]) => {
+          let label = mKey;
+          try {
+            label = new Date(mKey + '-01T00:00:00Z').toLocaleDateString('en-US', { month: 'short', year: '2-digit', timeZone: 'UTC' });
+          } catch (_) {}
+          return {
+            key: mKey,
+            label: label,
+            tooltipLabel: `Month of ${label}`,
+            opened: val.opened,
+            closed: val.closed
+          };
+        });
+      }
+
+      if (granularity === 'quarters') {
+        const groups = {};
+        history.forEach(d => {
+          const year = d.date.slice(0, 4);
+          const monthNum = parseInt(d.date.slice(5, 7), 10);
+          const qNum = Math.ceil(monthNum / 3);
+          const qKey = `${year}-Q${qNum}`;
+          if (!groups[qKey]) groups[qKey] = { year, qNum, opened: 0, closed: 0 };
+          groups[qKey].opened += (d.opened || 0);
+          groups[qKey].closed += (d.closed || 0);
+        });
+
+        return Object.entries(groups).slice(-8).map(([qKey, val]) => {
+          return {
+            key: qKey,
+            label: `Q${val.qNum} '${val.year.slice(2)}`,
+            tooltipLabel: `Q${val.qNum} ${val.year}`,
+            opened: val.opened,
+            closed: val.closed
+          };
+        });
+      }
+
+      if (granularity === 'years') {
+        const groups = {};
+        history.forEach(d => {
+          const yKey = d.date.slice(0, 4);
+          if (!groups[yKey]) groups[yKey] = { opened: 0, closed: 0 };
+          groups[yKey].opened += (d.opened || 0);
+          groups[yKey].closed += (d.closed || 0);
+        });
+
+        return Object.entries(groups).map(([yKey, val]) => {
+          return {
+            key: yKey,
+            label: yKey,
+            tooltipLabel: `Year ${yKey}`,
+            opened: val.opened,
+            closed: val.closed
+          };
+        });
+      }
+
+      return [];
+    }
+
     function renderWeeklyVelocityChart(history) {
       const container = document.getElementById('weekly-chart-container');
       const summaryBadge = document.getElementById('velocity-summary-badge');
@@ -455,7 +554,7 @@
         return;
       }
 
-      const data = history.slice(-8);
+      const data = aggregateVelocityData(history, currentVelocityGranularity);
       const latest = data[data.length - 1];
 
       if (summaryBadge && latest) {
@@ -464,7 +563,7 @@
         const label = net < 0 ? 'Burned down' : (net > 0 ? 'Backlog grew' : 'Balanced');
         const color = net < 0 ? 'text-emerald-400 border-emerald-500/30' : (net > 0 ? 'text-gh-yellow border-yellow-500/30' : 'text-gh-subtext border-gh-border');
         summaryBadge.className = `px-2 py-0.5 rounded text-[11px] font-mono border bg-gh-dark ${color}`;
-        summaryBadge.innerText = `Latest: ${sign}${net} net issues (${label})`;
+        summaryBadge.innerText = `${latest.label}: ${sign}${net} net issues (${label})`;
       }
 
       const svgWidth = 720;
@@ -480,7 +579,7 @@
       let maxVal = Math.max(...data.map(d => Math.max(d.opened || 0, d.closed || 0)), 6);
       if (maxVal % 2 !== 0) maxVal += 1;
 
-      const slotW = chartW / data.length;
+      const slotW = chartW / Math.max(data.length, 1);
       const barW = Math.min(22, Math.max(14, slotW * 0.28));
       const barGap = 4;
 
@@ -504,10 +603,8 @@
         const hClose = Math.max(2, ((d.closed || 0) / maxVal) * chartH);
         const yClose = padTop + chartH - hClose;
 
-        const dateLabel = new Date(d.date + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
-
         const net = (d.opened || 0) - (d.closed || 0);
-        const tooltip = `Week of ${d.date}: ${d.opened || 0} opened, ${d.closed || 0} closed (net ${net > 0 ? '+' : ''}${net})`;
+        const tooltip = `${d.tooltipLabel}: ${d.opened || 0} opened, ${d.closed || 0} closed (net ${net > 0 ? '+' : ''}${net})`;
 
         return `
           <g class="group" cursor="pointer">
@@ -517,7 +614,7 @@
             ${(d.opened || 0) > 0 ? `<text x="${xOpen + barW / 2}" y="${yOpen - 5}" fill="#58a6ff" font-size="10" font-family="monospace" font-weight="600" text-anchor="middle">${d.opened}</text>` : ''}
             <rect x="${xClose}" y="${yClose}" width="${barW}" height="${hClose}" fill="#2ea043" rx="3" class="hover:brightness-125 transition-all" />
             ${(d.closed || 0) > 0 ? `<text x="${xClose + barW / 2}" y="${yClose - 5}" fill="#3fb950" font-size="10" font-family="monospace" font-weight="600" text-anchor="middle">${d.closed}</text>` : ''}
-            <text x="${centerX}" y="${padTop + chartH + 18}" fill="#8b949e" font-size="11" font-family="monospace" text-anchor="middle" class="group-hover:fill-white transition-colors">${dateLabel}</text>
+            <text x="${centerX}" y="${padTop + chartH + 18}" fill="#8b949e" font-size="11" font-family="monospace" text-anchor="middle" class="group-hover:fill-white transition-colors">${d.label}</text>
           </g>
         `;
       }).join('');
@@ -528,6 +625,22 @@
           ${bars}
         </svg>
       `;
+    }
+
+    function setVelocityGranularity(granularity) {
+      currentVelocityGranularity = granularity;
+      document.querySelectorAll('.vel-gran-btn').forEach(b => {
+        b.classList.remove('bg-gh-border', 'text-white');
+        b.classList.add('bg-gh-panel', 'text-gh-subtext');
+      });
+      const activeBtn = document.getElementById(`vel-btn-${granularity}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-gh-panel', 'text-gh-subtext');
+        activeBtn.classList.add('bg-gh-border', 'text-white');
+      }
+      if (typeof DB !== 'undefined' && DB.history) {
+        renderWeeklyVelocityChart(DB.history);
+      }
     }
 
     function renderDashboard() {
