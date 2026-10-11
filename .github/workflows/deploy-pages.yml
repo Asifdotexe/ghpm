@@ -36,6 +36,9 @@ jobs:
           if [ -f data/final/dashboard_data.json ]; then
             cp data/final/dashboard_data.json _site/data/final/
           fi
+          if [ -f data/final/history.json ]; then
+            cp data/final/history.json _site/data/final/
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

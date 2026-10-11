@@ -8,6 +8,9 @@ import json
 import re
 from pathlib import Path
 
+from history import update_history
+
+
 REPOS_CSV = Path("data/interim/repos.csv")
 ISSUES_CSV = Path("data/interim/issues.csv")
 OUTPUT_JSON = Path("data/final/dashboard_data.json")
@@ -16,9 +19,9 @@ INDEX_HTML = Path("index.html")
 
 def build_dashboard_data() -> dict:
     """
-    Read interim CSV files and generate bundled dashboard dataset.
+    Read interim CSV files and generate bundled dashboard dataset with history.
 
-    :return: Dictionary containing repos and issues lists.
+    :return: Dictionary containing repos, issues, and history.
     """
     with open(REPOS_CSV, mode="r", encoding="utf-8") as f:
         repos = list(csv.DictReader(f))
@@ -26,10 +29,12 @@ def build_dashboard_data() -> dict:
     with open(ISSUES_CSV, mode="r", encoding="utf-8") as f:
         issues = list(csv.DictReader(f))
 
-    data = {"repos": repos, "issues": issues}
+    history = update_history(repos, issues)
+
+    data = {"repos": repos, "issues": issues, "history": history}
     OUTPUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_JSON.write_text(json.dumps(data, indent=2), encoding="utf-8")
-    print(f"Created {OUTPUT_JSON} ({len(repos)} repos, {len(issues)} issues)")
+    print(f"Created {OUTPUT_JSON} ({len(repos)} repos, {len(issues)} issues, {len(history)} snapshots)")
     return data
 
 

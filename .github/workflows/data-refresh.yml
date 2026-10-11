@@ -8,16 +8,15 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
-  weekly-refresh-pr:
+  weekly-refresh:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          persist-credentials: false
+          token: ${{ secrets.PAT_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -38,23 +37,17 @@ jobs:
           python -c "import json, csv; data = json.load(open('data/interim/repos.json', encoding='utf-8')); keys = ['name', 'description', 'updatedAt']; writer = csv.DictWriter(open('data/interim/repos.csv', 'w', encoding='utf-8', newline=''), fieldnames=keys); writer.writeheader(); writer.writerows(data)"
           uv run code/src/fetch_issues.py
 
-      - name: Build dashbord
+      - name: Build dashboard
         run: uv run code/src/build_dashboard.py
 
-      - name: Create pull request
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(data): weekly snapshot refresh"
-          branch: "weekly-data-sync"
-          title: "chore(data): weekly dashboard refresh"
-          labels: data-refresh
-          body: |
-            ### Weekly Dashboard & Backlog Refresh
-            Automated weekly pull request generated every Saturday at midnight UTC.
-            - Updates `data/interim/repos.csv` and `data/interim/issues.csv`
-            - Compiles `data/final/dashboard_data.json`
-            - Updates `index.html`
-
-            Merging this PR into `main` will automatically trigger the `Deploy Dashboard to GitHub Pages` workflow.
-          delete-branch: true
+      - name: Commit and push changes directly to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/interim/ data/final/ index.html
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(data): weekly snapshot refresh"
+            git push origin main
+          fi

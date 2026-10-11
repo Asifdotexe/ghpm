@@ -1195,5 +1195,57 @@
       "title": "formatting improvements",
       "labels": ""
     }
+  ],
+  "history": [
+    {
+      "date": "2026-09-12",
+      "total_repos": 100,
+      "total_issues": 116,
+      "active_repos": 46,
+      "zero_repos": 54,
+      "concentration_pct": 42.2,
+      "opened": 0,
+      "closed": 0
+    },
+    {
+      "date": "2026-09-19",
+      "total_repos": 101,
+      "total_issues": 118,
+      "active_repos": 46,
+      "zero_repos": 55,
+      "concentration_pct": 43.2,
+      "opened": 3,
+      "closed": 1
+    },
+    {
+      "date": "2026-09-26",
+      "total_repos": 101,
+      "total_issues": 112,
+      "active_repos": 45,
+      "zero_repos": 56,
+      "concentration_pct": 44.6,
+      "opened": 2,
+      "closed": 8
+    },
+    {
+      "date": "2026-10-03",
+      "total_repos": 102,
+      "total_issues": 115,
+      "active_repos": 46,
+      "zero_repos": 56,
+      "concentration_pct": 44.3,
+      "opened": 8,
+      "closed": 5
+    },
+    {
+      "date": "2026-10-10",
+      "total_repos": 103,
+      "total_issues": 113,
+      "active_repos": 48,
+      "zero_repos": 55,
+      "concentration_pct": 43.4,
+      "opened": 4,
+      "closed": 6
+    }
   ]
 }
