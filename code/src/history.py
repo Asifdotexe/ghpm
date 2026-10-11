@@ -47,15 +47,24 @@ def update_history(repos: list[dict], issues: list[dict]) -> list[dict]:
     top5_sum = sum(counts[:5])
     conc_pct = round((top5_sum / total_issues * 100), 1) if total_issues > 0 else 0.0
 
-    entry = next((e for e in history if e.get("date") == today), None)
-    if not entry:
-        entry = {"date": today}
-        history.append(entry)
-    elif opened == 0 and closed == 0:
-        opened = entry.get("opened", 0)
-        closed = entry.get("closed", 0)
+    existing_entry = next((e for e in history if e.get("date") == today), None)
+    if not existing_entry and history:
+        try:
+            last_date = datetime.strptime(history[-1].get("date"), "%Y-%m-%d").replace(tzinfo=timezone.utc)
+            curr_date = datetime.strptime(today, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+            if (curr_date - last_date).days < 6:
+                existing_entry = history[-1]
+        except Exception:
+            pass
 
-    entry.update({
+    if not existing_entry:
+        existing_entry = {"date": today}
+        history.append(existing_entry)
+    elif opened == 0 and closed == 0:
+        opened = existing_entry.get("opened", 0)
+        closed = existing_entry.get("closed", 0)
+
+    existing_entry.update({
         "total_repos": total_repos,
         "total_issues": total_issues,
         "active_repos": active_repos,

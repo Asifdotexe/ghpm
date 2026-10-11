@@ -424,6 +424,7 @@
       el.classList.remove('hidden');
 
       const { isPct = false, inverse = false, neutral = false } = options;
+      if (isPct && Math.abs(delta) < 0.05) delta = 0;
       const absVal = Math.abs(delta);
       const formattedVal = isPct ? `${absVal.toFixed(1)}%` : `${absVal}`;
 
