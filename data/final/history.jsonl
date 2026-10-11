@@ -3,4 +3,4 @@
 {"date": "2026-09-19", "iso_week": "2026-W38", "total_repos": 101, "total_issues": 118, "active_repos": 46, "zero_repos": 55, "concentration_pct": 43.2, "opened": 3, "closed": 1}
 {"date": "2026-09-26", "iso_week": "2026-W39", "total_repos": 101, "total_issues": 112, "active_repos": 45, "zero_repos": 56, "concentration_pct": 44.6, "opened": 2, "closed": 8}
 {"date": "2026-10-03", "iso_week": "2026-W40", "total_repos": 102, "total_issues": 115, "active_repos": 46, "zero_repos": 56, "concentration_pct": 44.3, "opened": 8, "closed": 5}
-{"date": "2026-10-11", "iso_week": "2026-W41", "total_repos": 103, "total_issues": 113, "active_repos": 48, "zero_repos": 55, "concentration_pct": 43.4, "opened": 4, "closed": 6}
+{"date": "2026-10-11", "iso_week": "2026-W41", "total_repos": 69, "total_issues": 100, "active_repos": 35, "zero_repos": 34, "concentration_pct": 49.0, "opened": 0, "closed": 13}

@@ -20,7 +20,6 @@ second-brain,170,Quantum entanglement or spooky action at a distance,feature-req
 second-brain,161,reproduce a ml paper,
 second-brain,137,CUDA,
 second-brain,102,User based accent selection,
-ghpm,19,push directly to main,
 journals,17,add a copy button for any code snippet block,bug
 journals,12,implement SEO. AEO and GEO,enhancement
 vent,1,implement praw when api key arrives,"enhancement, good first issue"
@@ -64,7 +63,6 @@ RecommendationHaki,68,feat: connect with MyAnimeList and similar platforms,enhan
 RecommendationHaki,67,feat: add toggle for nsfw recommedation,enhancement
 TenNine,10,data-enrichment,enhancement
 TenNine,9,feature-engineering,enhancement
-song-to-karaoke,1,make the mvp,
 open-see-wee,40,Deployment,
 open-see-wee,39,Edge detection module,
 open-see-wee,38,Morphology module,
@@ -89,26 +87,15 @@ playground-repo,7,Explore sound based AI algorithms,test
 playground-repo,5,try ELI5,
 playground-repo,3,try pypalette,
 PlateScribe,20,enchaning the model output,
-trend-analysis,1,smart-phone-ind-2025,
 StoDir,45,Use Cython for train.py,enhancement
 StoDir,43,data acquisition,
 StoDir,40,Portfolio Generalization,enhancement
-streamit-smoketester,1,setup the repository,enhancement
-mba-python-course,1,generate-introduction-module,
 reinventing-the-wheel,1,tokenizer,
-CodeCorsa,1,inital-prototype,enhancement
-VibeCheck,1,development,
-UFC-Fighter-Stats,1,scraper prototyping,
 deep-learning,8,ann-practice,
 tree-logic-extractor,5,implementing streamlit ui,enhancement
 QuickVU,30,improving the existing framework,
 QuickVU,29,model selection,
-finger-flow,1,hand tracking module,
-AskTube,1,development,enhancement
-Rec-it-Ralph,1,data wrangling,enhancement
-FoxFeed,1,set up,
 customer-satisfaction,8,deployment,
-ResuMaze,4,parsing and extraction,
 ThreadRace,3,fixing directory structure,
 monte-carlo-simulation,3,martingale strategy,
 AsiFunctions,9,formatting improvements,
