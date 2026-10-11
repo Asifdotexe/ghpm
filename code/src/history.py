@@ -3,9 +3,10 @@ History tracking and velocity snapshot module.
 Maintains data/final/history.json and tracks week-over-week opened/closed issues.
 """
 
-from collections import Counter
-from datetime import datetime, timezone
+import contextlib
 import json
+from collections import Counter
+from datetime import UTC, datetime
 from pathlib import Path
 
 BASELINE_JSON = Path("data/raw/baseline_history.json")
@@ -18,7 +19,7 @@ def update_history(repos: list[dict], issues: list[dict]) -> list[dict]:
     Update or append weekly metrics snapshot to data/final/history.json.
     Computes delta of opened and closed issues compared to previous snapshot.
     """
-    today_dt = datetime.now(timezone.utc)
+    today_dt = datetime.now(UTC)
     today = today_dt.strftime("%Y-%m-%d")
     iso_year, iso_week_num, _ = today_dt.isocalendar()
     iso_week = f"{iso_year}-W{iso_week_num:02d}"
@@ -28,14 +29,12 @@ def update_history(repos: list[dict], issues: list[dict]) -> list[dict]:
 
     prev_issues = set()
     if OUTPUT_JSON.exists():
-        try:
+        with contextlib.suppress(json.JSONDecodeError, OSError):
             prev_data = json.loads(OUTPUT_JSON.read_text(encoding="utf-8"))
             prev_issues = {
                 (x.get("repo_name"), str(x.get("issue_number")))
                 for x in prev_data.get("issues", [])
             }
-        except Exception:
-            pass
 
     curr_issues = {(x.get("repo_name"), str(x.get("issue_number"))) for x in issues}
     opened = len(curr_issues - prev_issues) if prev_issues else 0

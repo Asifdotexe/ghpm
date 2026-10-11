@@ -1,5 +1,16 @@
 [
   {
+    "date": "2026-09-05",
+    "iso_week": "2026-W36",
+    "total_repos": 100,
+    "total_issues": 116,
+    "active_repos": 46,
+    "zero_repos": 54,
+    "concentration_pct": 42.2,
+    "opened": 6,
+    "closed": 4
+  },
+  {
     "date": "2026-09-12",
     "iso_week": "2026-W37",
     "total_repos": 100,
@@ -7,8 +18,8 @@
     "active_repos": 46,
     "zero_repos": 54,
     "concentration_pct": 42.2,
-    "opened": 0,
-    "closed": 0
+    "opened": 5,
+    "closed": 9
   },
   {
     "date": "2026-09-19",

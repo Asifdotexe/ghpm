@@ -10,7 +10,6 @@ from pathlib import Path
 
 from history import update_history
 
-
 REPOS_CSV = Path("data/interim/repos.csv")
 ISSUES_CSV = Path("data/interim/issues.csv")
 OUTPUT_JSON = Path("data/final/dashboard_data.json")
