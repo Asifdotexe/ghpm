@@ -459,15 +459,23 @@
 
       if (granularity === 'weeks') {
         return history.slice(-8).map(d => {
-          let label = d.date;
-          try {
-            label = new Date(d.date + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
-          } catch (_) {}
-          const weekTag = d.iso_week ? d.iso_week.split('-')[1] : '';
+          let weekTag = d.iso_week ? d.iso_week.split('-')[1] : '';
+          if (!weekTag && d.date) {
+            try {
+              const dt = new Date(d.date + 'T00:00:00Z');
+              const dTemp = new Date(Date.UTC(dt.getUTCFullYear(), dt.getUTCMonth(), dt.getUTCDate()));
+              const dayNum = dTemp.getUTCDay() || 7;
+              dTemp.setUTCDate(dTemp.getUTCDate() + 4 - dayNum);
+              const yearStart = new Date(Date.UTC(dTemp.getUTCFullYear(), 0, 1));
+              const wNum = Math.ceil((((dTemp - yearStart) / 86400000) + 1) / 7);
+              weekTag = `W${String(wNum).padStart(2, '0')}`;
+            } catch (_) {}
+          }
+          const label = weekTag || d.date;
           return {
             key: d.iso_week || d.date,
-            label: weekTag ? `${label} (${weekTag})` : label,
-            tooltipLabel: `Week ${d.iso_week || d.date}`,
+            label: label,
+            tooltipLabel: d.iso_week ? `${d.iso_week} (${d.date})` : `Week ${d.date}`,
             opened: d.opened || 0,
             closed: d.closed || 0
           };
