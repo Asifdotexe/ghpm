@@ -1,6 +1,6 @@
 """
 History tracking and velocity snapshot module.
-Maintains data/final/history.json and tracks week-over-week opened/closed issues.
+Maintains data/final/history.jsonl and tracks week-over-week opened/closed issues.
 """
 
 import contextlib
@@ -9,14 +9,28 @@ from collections import Counter
 from datetime import UTC, datetime
 from pathlib import Path
 
-BASELINE_JSON = Path("data/raw/baseline_history.json")
-HISTORY_JSON = Path("data/final/history.json")
+from schema import HistorySnapshot
+
+BASELINE_JSONL = Path("data/raw/baseline_history.jsonl")
+HISTORY_JSONL = Path("data/final/history.jsonl")
 OUTPUT_JSON = Path("data/final/dashboard_data.json")
+
+
+def load_history() -> list[dict]:
+    """Load historical snapshots from data/final/history.jsonl or baseline."""
+    source = HISTORY_JSONL if HISTORY_JSONL.exists() else BASELINE_JSONL
+    if not source.exists():
+        return []
+    snapshots = []
+    for line in source.read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            snapshots.append(json.loads(line))
+    return snapshots
 
 
 def update_history(repos: list[dict], issues: list[dict]) -> list[dict]:
     """
-    Update or append weekly metrics snapshot to data/final/history.json.
+    Update or append weekly metrics snapshot to data/final/history.jsonl.
     Computes delta of opened and closed issues compared to previous snapshot.
     """
     today_dt = datetime.now(UTC)
@@ -24,8 +38,7 @@ def update_history(repos: list[dict], issues: list[dict]) -> list[dict]:
     iso_year, iso_week_num, _ = today_dt.isocalendar()
     iso_week = f"{iso_year}-W{iso_week_num:02d}"
 
-    source = HISTORY_JSON if HISTORY_JSON.exists() else BASELINE_JSON
-    history = json.loads(source.read_text(encoding="utf-8")) if source.exists() else []
+    history = load_history()
 
     prev_issues = set()
     if OUTPUT_JSON.exists():
@@ -58,7 +71,7 @@ def update_history(repos: list[dict], issues: list[dict]) -> list[dict]:
         opened = existing_entry.get("opened", 0)
         closed = existing_entry.get("closed", 0)
 
-    existing_entry.update({
+    updated_snapshot = {
         "date": today,
         "iso_week": iso_week,
         "total_repos": total_repos,
@@ -68,9 +81,15 @@ def update_history(repos: list[dict], issues: list[dict]) -> list[dict]:
         "concentration_pct": conc_pct,
         "opened": opened,
         "closed": closed,
-    })
+    }
 
-    HISTORY_JSON.parent.mkdir(parents=True, exist_ok=True)
-    HISTORY_JSON.write_text(json.dumps(history, indent=2), encoding="utf-8")
-    print(f"Updated {HISTORY_JSON} ({len(history)} snapshots recorded)")
+    # Validate snapshot against schema invariants
+    validated = HistorySnapshot.model_validate(updated_snapshot)
+    existing_entry.update(validated.model_dump())
+
+    HISTORY_JSONL.parent.mkdir(parents=True, exist_ok=True)
+    with open(HISTORY_JSONL, "w", encoding="utf-8") as f:
+        f.writelines(json.dumps(entry) + "\n" for entry in history)
+
+    print(f"Updated {HISTORY_JSONL} ({len(history)} snapshots recorded)")
     return history

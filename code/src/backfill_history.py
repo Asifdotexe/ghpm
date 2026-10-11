@@ -2,6 +2,7 @@
 Historical issue velocity backfill script.
 Surgically imputes opened and closed issue counts for any requested date range
 via the GitHub Search API without overwhelming rate limits.
+Saves time-series snapshots to data/final/history.jsonl.
 """
 
 import argparse
@@ -17,9 +18,10 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 
 from build_dashboard import inject_into_html
+from history import HISTORY_JSONL, load_history
+from schema import HistorySnapshot
+from validate_data import validate_all
 
-HISTORY_JSON = Path("data/final/history.json")
-BASELINE_JSON = Path("data/raw/baseline_history.json")
 OUTPUT_JSON = Path("data/final/dashboard_data.json")
 
 
@@ -165,9 +167,7 @@ def backfill_history(
     opened_by_week = count_by_iso_week(created_issues, "created_at")
     closed_by_week = count_by_iso_week(closed_issues, "closed_at")
 
-    source = HISTORY_JSON if HISTORY_JSON.exists() else BASELINE_JSON
-    history = json.loads(source.read_text(encoding="utf-8")) if source.exists() else []
-
+    history = load_history()
     existing_by_week = {e.get("iso_week"): e for e in history}
 
     imputed_count = 0
@@ -185,6 +185,8 @@ def backfill_history(
                 print(f"  [Update] {w_key}: opened {entry.get('opened')} -> {op_count}, closed {entry.get('closed')} -> {cl_count}")
                 entry["opened"] = op_count
                 entry["closed"] = cl_count
+                # Validate updated entry
+                HistorySnapshot.model_validate(entry)
                 updated_count += 1
             else:
                 print(f"  [Keep]   {w_key}: keeping existing flux opened={entry.get('opened')}, closed={entry.get('closed')}")
@@ -201,8 +203,11 @@ def backfill_history(
                 "opened": op_count,
                 "closed": cl_count,
             }
-            history.append(new_entry)
-            existing_by_week[w_key] = new_entry
+            # Validate new entry against schema invariants
+            validated = HistorySnapshot.model_validate(new_entry)
+            entry_dict = validated.model_dump()
+            history.append(entry_dict)
+            existing_by_week[w_key] = entry_dict
             imputed_count += 1
 
     history.sort(key=lambda x: (x.get("date", ""), x.get("iso_week", "")))
@@ -213,9 +218,13 @@ def backfill_history(
         print("[Dry Run] No files modified.")
         return history
 
-    HISTORY_JSON.parent.mkdir(parents=True, exist_ok=True)
-    HISTORY_JSON.write_text(json.dumps(history, indent=2), encoding="utf-8")
-    print(f"Saved updated history to {HISTORY_JSON}")
+    HISTORY_JSONL.parent.mkdir(parents=True, exist_ok=True)
+    with open(HISTORY_JSONL, "w", encoding="utf-8") as f:
+        f.writelines(json.dumps(entry) + "\n" for entry in history)
+    print(f"Saved updated history to {HISTORY_JSONL}")
+
+    if not validate_all():
+        raise RuntimeError("Validation failed after backfill. Aborting dashboard sync.")
 
     if OUTPUT_JSON.exists():
         dashboard_data = json.loads(OUTPUT_JSON.read_text(encoding="utf-8"))
