@@ -1,0 +1,63 @@
+name: Historical Velocity Backfill
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: 'Start Date (YYYY-MM-DD)'
+        required: true
+        default: '2026-09-01'
+      end_date:
+        description: 'End Date (YYYY-MM-DD)'
+        required: true
+        default: '2026-09-30'
+      overwrite_flux:
+        description: 'Overwrite existing non-zero flux counts'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.6.14"
+
+      - name: Run historical backfill
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          uv run code/src/backfill_history.py \
+            --start-date "${{ inputs.start_date }}" \
+            --end-date "${{ inputs.end_date }}" \
+            ${{ inputs.overwrite_flux && '--overwrite-flux' || '' }}
+
+      - name: Commit and push changes directly to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/final/history.json data/final/dashboard_data.json index.html
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(data): backfill historical velocity snapshots (${{ inputs.start_date }} to ${{ inputs.end_date }})"
+            git pull --rebase origin main
+            git push origin main
+          fi

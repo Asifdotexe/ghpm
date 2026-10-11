@@ -4,9 +4,9 @@ Module responsible for fetching the github issues associated with a given list o
 
 import csv
 import json
-from pathlib import Path
 import re
 import subprocess
+from pathlib import Path
 
 USERNAME = "Asifdotexe"
 CSV_FILE = Path("data/interim/repos.csv")
@@ -73,11 +73,10 @@ def main() -> None:
 
                 print(f"Fetch issues. Repo: {repo_name}")
                 cmd = ["gh", "issue", "list", "--repo", f"{USERNAME}/{repo_name}", "--json", "number,title,labels"]
-                result = subprocess.run(cmd, capture_output=True, text=True)
+                result = subprocess.run(cmd, check=False, capture_output=True, text=True)
 
-                if result.returncode != 0:
-                    if handle_gh_error(repo_name, result.stderr):
-                        continue
+                if result.returncode != 0 and handle_gh_error(repo_name, result.stderr):
+                    continue
 
                 for issue in json.loads(result.stdout):
                     writer.writerow({
