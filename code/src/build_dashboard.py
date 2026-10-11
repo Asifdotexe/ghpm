@@ -1,6 +1,7 @@
 """
 Build script to compile CSV interim data into data/dashboard_data.json
 and inject it into index.html for static/serverless hosting.
+Enforces dataset schema validation prior to compilation.
 """
 
 import csv
@@ -9,6 +10,7 @@ import re
 from pathlib import Path
 
 from history import update_history
+from validate_data import validate_all
 
 REPOS_CSV = Path("data/interim/repos.csv")
 ISSUES_CSV = Path("data/interim/issues.csv")
@@ -29,6 +31,10 @@ def build_dashboard_data() -> dict:
         issues = list(csv.DictReader(f))
 
     history = update_history(repos, issues)
+
+    # Validate all datasets after updating history
+    if not validate_all():
+        raise RuntimeError("Dataset schema validation failed. Aborting dashboard build.")
 
     data = {"repos": repos, "issues": issues, "history": history}
     OUTPUT_JSON.parent.mkdir(parents=True, exist_ok=True)
