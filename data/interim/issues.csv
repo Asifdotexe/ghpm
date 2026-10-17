@@ -2,9 +2,7 @@ repo_name,issue_number,title,labels
 portfolio,135,Code snippet for public commits per day,"documentation, enhancement, good first issue, frontend"
 portfolio,127,add public speaking and educator optimisations,"enhancement, SEO"
 portfolio,105,implement radar graph for skills,enhancement
-backpocket,11,make mkdocs,
-Elenchus,7,add functionality to hear external audio,enhancement
-Elenchus,3,UI version improvements,enhancement
+second-brain,226,https://www.datascience-pm.com/,feature-request
 second-brain,225,Etymology ,feature-request
 second-brain,224,Mary room thought experiment,feature-request
 second-brain,222,Logo design skill,feature-request
@@ -20,8 +18,9 @@ second-brain,170,Quantum entanglement or spooky action at a distance,feature-req
 second-brain,161,reproduce a ml paper,
 second-brain,137,CUDA,
 second-brain,102,User based accent selection,
-journals,17,add a copy button for any code snippet block,bug
-journals,12,implement SEO. AEO and GEO,enhancement
+backpocket,11,make mkdocs,
+Elenchus,7,add functionality to hear external audio,enhancement
+Elenchus,3,UI version improvements,enhancement
 vent,1,implement praw when api key arrives,"enhancement, good first issue"
 tram,1,"TRAM MVP (install, remove, list, check) using Python Standard Library",
 SERPENT,31,make library that can explain a function it is passed onto,enhancement

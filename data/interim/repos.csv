@@ -1,10 +1,11 @@
 name,description,updatedAt
-ghpm,Github project management pipeline,2026-10-11T10:18:29Z
 portfolio," Personal portfolio of Asif Sayyed, Data Science Specialist. A fast, statically generated website optimized for AI Search (GEO) and built with HTML, CSS, JS, and Python automation.",2026-09-26T09:56:34Z
+journals,"Log book of my personal decision making, learnings and mistakes",2026-10-16T18:49:58Z
+second-brain,A personal knowledge base and second brain,2026-10-03T06:02:05Z
+technical-writing,Repository to practice technical writing and update it daily (ideally),2026-10-11T13:38:52Z
+ghpm,Github project management pipeline,2026-10-11T10:34:15Z
 backpocket,Some scripts that I'd like to keep in my backpocket,2026-10-07T09:04:13Z
 Elenchus,Elenchus is an offline debate analysis and fallacy detection engine designed for live conversations and recorded speech.,2026-10-03T09:23:09Z
-second-brain,A personal knowledge base and second brain,2026-10-03T06:02:05Z
-journals,"Log book of my personal decision making, learnings and mistakes",2026-09-23T17:47:56Z
 vent,"vent is a CLI and TUI tool designed to identify, collect, and explore developer frustrations across Reddit. By combining automated scraping, heuristic filtering, and an interactive terminal dashboard, vent helps you transform community noise into a structured pipeline of product insights.",2026-08-04T06:13:25Z
 tram,Terminal Router for Agent Modules,2026-08-14T11:10:24Z
 SERPENT,Syntactic Extraction and Rendering of Python’s End-to-end Node Trees,2026-02-11T07:36:42Z
