@@ -6,9 +6,29 @@
       "updatedAt": "2026-09-26T09:56:34Z"
     },
     {
+      "name": "Theseus",
+      "description": "Does a codebase remain the same if every line is replaced? A monthly pulse on software entropy.",
+      "updatedAt": "2026-10-23T16:26:44Z"
+    },
+    {
       "name": "journals",
       "description": "Log book of my personal decision making, learnings and mistakes",
-      "updatedAt": "2026-10-16T18:49:58Z"
+      "updatedAt": "2026-10-17T10:57:11Z"
+    },
+    {
+      "name": "uroboro",
+      "description": "Let python eat it's tail and help us understand the code better and faster",
+      "updatedAt": "2026-10-18T06:05:43Z"
+    },
+    {
+      "name": "Elenchus",
+      "description": "Elenchus is an offline debate analysis and fallacy detection engine designed for live conversations and recorded speech.",
+      "updatedAt": "2026-10-17T13:07:26Z"
+    },
+    {
+      "name": "ghpm",
+      "description": "Github project management pipeline",
+      "updatedAt": "2026-10-17T02:58:10Z"
     },
     {
       "name": "second-brain",
@@ -21,19 +41,9 @@
       "updatedAt": "2026-10-11T13:38:52Z"
     },
     {
-      "name": "ghpm",
-      "description": "Github project management pipeline",
-      "updatedAt": "2026-10-11T10:34:15Z"
-    },
-    {
       "name": "backpocket",
       "description": "Some scripts that I'd like to keep in my backpocket",
       "updatedAt": "2026-10-07T09:04:13Z"
-    },
-    {
-      "name": "Elenchus",
-      "description": "Elenchus is an offline debate analysis and fallacy detection engine designed for live conversations and recorded speech.",
-      "updatedAt": "2026-10-03T09:23:09Z"
     },
     {
       "name": "vent",
@@ -63,7 +73,7 @@
     {
       "name": "DORA",
       "description": "DORA (Data Oriented Report Automator) automates Exploratory Data Analysis (EDA) to help you effortlessly explore datasets. Generate insightful statistics, visualizations, and reports with just a click! Streamline your data exploration workflow and uncover trends, patterns, and relationships in your data with ease.",
-      "updatedAt": "2026-10-09T17:41:23Z"
+      "updatedAt": "2026-10-19T15:32:28Z"
     },
     {
       "name": "TrueML",
@@ -79,11 +89,6 @@
       "name": "presentations",
       "description": "A repository to contains all the presentations I created",
       "updatedAt": "2026-08-29T10:54:27Z"
-    },
-    {
-      "name": "Theseus",
-      "description": "Does a codebase remain the same if every line is replaced? A monthly pulse on software entropy.",
-      "updatedAt": "2026-08-01T08:15:56Z"
     },
     {
       "name": "skill-issue",
@@ -354,6 +359,18 @@
   "issues": [
     {
       "repo_name": "portfolio",
+      "issue_number": "152",
+      "title": "add elenchus and ghpm to the project section",
+      "labels": ""
+    },
+    {
+      "repo_name": "portfolio",
+      "issue_number": "151",
+      "title": "add a journal button on the projects as well",
+      "labels": "documentation, enhancement, frontend"
+    },
+    {
+      "repo_name": "portfolio",
       "issue_number": "135",
       "title": "Code snippet for public commits per day",
       "labels": "documentation, enhancement, good first issue, frontend"
@@ -368,6 +385,78 @@
       "repo_name": "portfolio",
       "issue_number": "105",
       "title": "implement radar graph for skills",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "81",
+      "title": "save-the-sinking-ship",
+      "labels": "help wanted, refactor"
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "80",
+      "title": "migrate to unittest",
+      "labels": ""
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "79",
+      "title": "css improvements",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "76",
+      "title": "ui feedback from regina",
+      "labels": "enhancement, ui/ux"
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "75",
+      "title": "make the ui responsive",
+      "labels": "enhancement, ui/ux"
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "61",
+      "title": "Try integrating bend",
+      "labels": "enhancement, help wanted"
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "30",
+      "title": "Star summary",
+      "labels": ""
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "27",
+      "title": "feat: support for local repository paths",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "journals",
+      "issue_number": "28",
+      "title": "how to save a ship from sinking",
+      "labels": ""
+    },
+    {
+      "repo_name": "Elenchus",
+      "issue_number": "15",
+      "title": "explore faster-whisper to cactus-whistle migration",
+      "labels": ""
+    },
+    {
+      "repo_name": "Elenchus",
+      "issue_number": "7",
+      "title": "add functionality to hear external audio",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "Elenchus",
+      "issue_number": "3",
+      "title": "UI version improvements",
       "labels": "enhancement"
     },
     {
@@ -386,18 +475,6 @@
       "repo_name": "second-brain",
       "issue_number": "224",
       "title": "Mary room thought experiment",
-      "labels": "feature-request"
-    },
-    {
-      "repo_name": "second-brain",
-      "issue_number": "222",
-      "title": "Logo design skill",
-      "labels": "feature-request"
-    },
-    {
-      "repo_name": "second-brain",
-      "issue_number": "195",
-      "title": "Clean UI resource",
       "labels": "feature-request"
     },
     {
@@ -468,21 +545,15 @@
     },
     {
       "repo_name": "backpocket",
-      "issue_number": "11",
-      "title": "make mkdocs",
+      "issue_number": "12",
+      "title": "update the pyproject toml default template",
       "labels": ""
     },
     {
-      "repo_name": "Elenchus",
-      "issue_number": "7",
-      "title": "add functionality to hear external audio",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "Elenchus",
-      "issue_number": "3",
-      "title": "UI version improvements",
-      "labels": "enhancement"
+      "repo_name": "backpocket",
+      "issue_number": "11",
+      "title": "make mkdocs",
+      "labels": "documentation"
     },
     {
       "repo_name": "vent",
@@ -596,48 +667,6 @@
       "repo_name": "DORA",
       "issue_number": "42",
       "title": "add custom color palette + dark mode",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "Theseus",
-      "issue_number": "80",
-      "title": "migrate to unittest",
-      "labels": ""
-    },
-    {
-      "repo_name": "Theseus",
-      "issue_number": "79",
-      "title": "css improvements",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "Theseus",
-      "issue_number": "76",
-      "title": "ui feedback from regina",
-      "labels": "enhancement, ui/ux"
-    },
-    {
-      "repo_name": "Theseus",
-      "issue_number": "75",
-      "title": "make the ui responsive",
-      "labels": "enhancement, ui/ux"
-    },
-    {
-      "repo_name": "Theseus",
-      "issue_number": "61",
-      "title": "Try integrating bend",
-      "labels": "enhancement, help wanted"
-    },
-    {
-      "repo_name": "Theseus",
-      "issue_number": "30",
-      "title": "Star summary",
-      "labels": ""
-    },
-    {
-      "repo_name": "Theseus",
-      "issue_number": "27",
-      "title": "feat: support for local repository paths",
       "labels": "enhancement"
     },
     {
@@ -4609,6 +4638,17 @@
       "zero_repos": 36,
       "concentration_pct": 50.5,
       "opened": 1,
+      "closed": 2
+    },
+    {
+      "date": "2026-10-24",
+      "iso_week": "2026-W43",
+      "total_repos": 71,
+      "total_issues": 103,
+      "active_repos": 35,
+      "zero_repos": 36,
+      "concentration_pct": 47.6,
+      "opened": 6,
       "closed": 2
     }
   ]

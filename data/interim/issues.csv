@@ -1,12 +1,24 @@
 repo_name,issue_number,title,labels
+portfolio,152,add elenchus and ghpm to the project section,
+portfolio,151,add a journal button on the projects as well,"documentation, enhancement, frontend"
 portfolio,135,Code snippet for public commits per day,"documentation, enhancement, good first issue, frontend"
 portfolio,127,add public speaking and educator optimisations,"enhancement, SEO"
 portfolio,105,implement radar graph for skills,enhancement
+Theseus,81,save-the-sinking-ship,"help wanted, refactor"
+Theseus,80,migrate to unittest,
+Theseus,79,css improvements,enhancement
+Theseus,76,ui feedback from regina,"enhancement, ui/ux"
+Theseus,75,make the ui responsive,"enhancement, ui/ux"
+Theseus,61,Try integrating bend,"enhancement, help wanted"
+Theseus,30,Star summary,
+Theseus,27,feat: support for local repository paths,enhancement
+journals,28,how to save a ship from sinking,
+Elenchus,15,explore faster-whisper to cactus-whistle migration,
+Elenchus,7,add functionality to hear external audio,enhancement
+Elenchus,3,UI version improvements,enhancement
 second-brain,226,https://www.datascience-pm.com/,feature-request
 second-brain,225,Etymology ,feature-request
 second-brain,224,Mary room thought experiment,feature-request
-second-brain,222,Logo design skill,feature-request
-second-brain,195,Clean UI resource,feature-request
 second-brain,194,Ken thompson: Malicious code in compiler,feature-request
 second-brain,193,Read this article on package manager,feature-request
 second-brain,187,Learn about this,feature-request
@@ -18,9 +30,8 @@ second-brain,170,Quantum entanglement or spooky action at a distance,feature-req
 second-brain,161,reproduce a ml paper,
 second-brain,137,CUDA,
 second-brain,102,User based accent selection,
-backpocket,11,make mkdocs,
-Elenchus,7,add functionality to hear external audio,enhancement
-Elenchus,3,UI version improvements,enhancement
+backpocket,12,update the pyproject toml default template,
+backpocket,11,make mkdocs,documentation
 vent,1,implement praw when api key arrives,"enhancement, good first issue"
 tram,1,"TRAM MVP (install, remove, list, check) using Python Standard Library",
 SERPENT,31,make library that can explain a function it is passed onto,enhancement
@@ -40,13 +51,6 @@ DORA,63,Update the demo website,enhancement
 DORA,62,update text color for readability,enhancement
 DORA,46,add handling for UCI repository like kaggle,enhancement
 DORA,42,add custom color palette + dark mode,enhancement
-Theseus,80,migrate to unittest,
-Theseus,79,css improvements,enhancement
-Theseus,76,ui feedback from regina,"enhancement, ui/ux"
-Theseus,75,make the ui responsive,"enhancement, ui/ux"
-Theseus,61,Try integrating bend,"enhancement, help wanted"
-Theseus,30,Star summary,
-Theseus,27,feat: support for local repository paths,enhancement
 getting-rusty,1,getting started with basics,documentation
 doh,22,more cybersecurity questions,add-questions
 doh,21,add myth busters,"enhancement, add-questions"
