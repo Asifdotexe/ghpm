@@ -6,14 +6,29 @@
       "updatedAt": "2026-09-26T09:56:34Z"
     },
     {
-      "name": "Theseus",
-      "description": "Does a codebase remain the same if every line is replaced? A monthly pulse on software entropy.",
-      "updatedAt": "2026-10-23T16:26:44Z"
+      "name": "happy-birthday-jivisha",
+      "description": "",
+      "updatedAt": "2026-10-30T06:02:47Z"
+    },
+    {
+      "name": "second-brain",
+      "description": "A personal knowledge base and second brain",
+      "updatedAt": "2026-10-29T07:08:27Z"
     },
     {
       "name": "journals",
       "description": "Log book of my personal decision making, learnings and mistakes",
-      "updatedAt": "2026-10-17T10:57:11Z"
+      "updatedAt": "2026-10-28T06:55:43Z"
+    },
+    {
+      "name": "Theseus",
+      "description": "Does a codebase remain the same if every line is replaced? A monthly pulse on software entropy.",
+      "updatedAt": "2026-10-26T07:29:48Z"
+    },
+    {
+      "name": "ghpm",
+      "description": "Github project management pipeline",
+      "updatedAt": "2026-10-24T03:15:01Z"
     },
     {
       "name": "uroboro",
@@ -24,16 +39,6 @@
       "name": "Elenchus",
       "description": "Elenchus is an offline debate analysis and fallacy detection engine designed for live conversations and recorded speech.",
       "updatedAt": "2026-10-17T13:07:26Z"
-    },
-    {
-      "name": "ghpm",
-      "description": "Github project management pipeline",
-      "updatedAt": "2026-10-17T02:58:10Z"
-    },
-    {
-      "name": "second-brain",
-      "description": "A personal knowledge base and second brain",
-      "updatedAt": "2026-10-03T06:02:05Z"
     },
     {
       "name": "technical-writing",
@@ -73,7 +78,7 @@
     {
       "name": "DORA",
       "description": "DORA (Data Oriented Report Automator) automates Exploratory Data Analysis (EDA) to help you effortlessly explore datasets. Generate insightful statistics, visualizations, and reports with just a click! Streamline your data exploration workflow and uncover trends, patterns, and relationships in your data with ease.",
-      "updatedAt": "2026-10-19T15:32:28Z"
+      "updatedAt": "2026-10-29T04:32:17Z"
     },
     {
       "name": "TrueML",
@@ -388,87 +393,15 @@
       "labels": "enhancement"
     },
     {
-      "repo_name": "Theseus",
-      "issue_number": "81",
-      "title": "save-the-sinking-ship",
-      "labels": "help wanted, refactor"
-    },
-    {
-      "repo_name": "Theseus",
-      "issue_number": "80",
-      "title": "migrate to unittest",
-      "labels": ""
-    },
-    {
-      "repo_name": "Theseus",
-      "issue_number": "79",
-      "title": "css improvements",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "Theseus",
-      "issue_number": "76",
-      "title": "ui feedback from regina",
-      "labels": "enhancement, ui/ux"
-    },
-    {
-      "repo_name": "Theseus",
-      "issue_number": "75",
-      "title": "make the ui responsive",
-      "labels": "enhancement, ui/ux"
-    },
-    {
-      "repo_name": "Theseus",
-      "issue_number": "61",
-      "title": "Try integrating bend",
-      "labels": "enhancement, help wanted"
-    },
-    {
-      "repo_name": "Theseus",
-      "issue_number": "30",
-      "title": "Star summary",
-      "labels": ""
-    },
-    {
-      "repo_name": "Theseus",
-      "issue_number": "27",
-      "title": "feat: support for local repository paths",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "journals",
-      "issue_number": "28",
-      "title": "how to save a ship from sinking",
-      "labels": ""
-    },
-    {
-      "repo_name": "Elenchus",
-      "issue_number": "15",
-      "title": "explore faster-whisper to cactus-whistle migration",
-      "labels": ""
-    },
-    {
-      "repo_name": "Elenchus",
-      "issue_number": "7",
-      "title": "add functionality to hear external audio",
-      "labels": "enhancement"
-    },
-    {
-      "repo_name": "Elenchus",
-      "issue_number": "3",
-      "title": "UI version improvements",
-      "labels": "enhancement"
+      "repo_name": "second-brain",
+      "issue_number": "227",
+      "title": "Add notes about this ",
+      "labels": "feature-request"
     },
     {
       "repo_name": "second-brain",
       "issue_number": "226",
       "title": "https://www.datascience-pm.com/",
-      "labels": "feature-request"
-    },
-    {
-      "repo_name": "second-brain",
-      "issue_number": "225",
-      "title": "Etymology ",
       "labels": "feature-request"
     },
     {
@@ -542,6 +475,84 @@
       "issue_number": "102",
       "title": "User based accent selection",
       "labels": ""
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "108",
+      "title": "Provide one-line VM bootstrapping script and updated onboarding documentation",
+      "labels": "enhancement, v2.1.0"
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "107",
+      "title": "Unify configuration management and eliminate public/theseus.config.json drift",
+      "labels": "enhancement, v2.1.0"
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "106",
+      "title": "Build independent tag and release milestone extraction module",
+      "labels": "enhancement, v2.1.0"
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "105",
+      "title": "Create automated repository onboarding CLI (scripts.add_repo)",
+      "labels": "enhancement, v2.1.0"
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "104",
+      "title": "Build secure GitHub authentication setup and credential manager",
+      "labels": "enhancement, v2.1.0"
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "103",
+      "title": "Implement automated engine binary release workflow and smart runtime fallback",
+      "labels": "enhancement, v2.1.0"
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "102",
+      "title": "v2.1.0: Developer Experience Enchancement",
+      "labels": "enhancement, v2.1.0"
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "75",
+      "title": "make the ui responsive",
+      "labels": "enhancement, ui/ux"
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "30",
+      "title": "Star summary",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "Theseus",
+      "issue_number": "27",
+      "title": "feat: support for local repository paths",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "Elenchus",
+      "issue_number": "15",
+      "title": "explore faster-whisper to cactus-whistle migration",
+      "labels": ""
+    },
+    {
+      "repo_name": "Elenchus",
+      "issue_number": "7",
+      "title": "add functionality to hear external audio",
+      "labels": "enhancement"
+    },
+    {
+      "repo_name": "Elenchus",
+      "issue_number": "3",
+      "title": "UI version improvements",
+      "labels": "enhancement"
     },
     {
       "repo_name": "backpocket",
@@ -4650,6 +4661,17 @@
       "concentration_pct": 47.6,
       "opened": 6,
       "closed": 2
+    },
+    {
+      "date": "2026-10-31",
+      "iso_week": "2026-W44",
+      "total_repos": 72,
+      "total_issues": 104,
+      "active_repos": 34,
+      "zero_repos": 38,
+      "concentration_pct": 49.0,
+      "opened": 8,
+      "closed": 7
     }
   ]
 }

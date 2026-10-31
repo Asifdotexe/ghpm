@@ -4,20 +4,8 @@ portfolio,151,add a journal button on the projects as well,"documentation, enhan
 portfolio,135,Code snippet for public commits per day,"documentation, enhancement, good first issue, frontend"
 portfolio,127,add public speaking and educator optimisations,"enhancement, SEO"
 portfolio,105,implement radar graph for skills,enhancement
-Theseus,81,save-the-sinking-ship,"help wanted, refactor"
-Theseus,80,migrate to unittest,
-Theseus,79,css improvements,enhancement
-Theseus,76,ui feedback from regina,"enhancement, ui/ux"
-Theseus,75,make the ui responsive,"enhancement, ui/ux"
-Theseus,61,Try integrating bend,"enhancement, help wanted"
-Theseus,30,Star summary,
-Theseus,27,feat: support for local repository paths,enhancement
-journals,28,how to save a ship from sinking,
-Elenchus,15,explore faster-whisper to cactus-whistle migration,
-Elenchus,7,add functionality to hear external audio,enhancement
-Elenchus,3,UI version improvements,enhancement
+second-brain,227,Add notes about this ,feature-request
 second-brain,226,https://www.datascience-pm.com/,feature-request
-second-brain,225,Etymology ,feature-request
 second-brain,224,Mary room thought experiment,feature-request
 second-brain,194,Ken thompson: Malicious code in compiler,feature-request
 second-brain,193,Read this article on package manager,feature-request
@@ -30,6 +18,19 @@ second-brain,170,Quantum entanglement or spooky action at a distance,feature-req
 second-brain,161,reproduce a ml paper,
 second-brain,137,CUDA,
 second-brain,102,User based accent selection,
+Theseus,108,Provide one-line VM bootstrapping script and updated onboarding documentation,"enhancement, v2.1.0"
+Theseus,107,Unify configuration management and eliminate public/theseus.config.json drift,"enhancement, v2.1.0"
+Theseus,106,Build independent tag and release milestone extraction module,"enhancement, v2.1.0"
+Theseus,105,Create automated repository onboarding CLI (scripts.add_repo),"enhancement, v2.1.0"
+Theseus,104,Build secure GitHub authentication setup and credential manager,"enhancement, v2.1.0"
+Theseus,103,Implement automated engine binary release workflow and smart runtime fallback,"enhancement, v2.1.0"
+Theseus,102,v2.1.0: Developer Experience Enchancement,"enhancement, v2.1.0"
+Theseus,75,make the ui responsive,"enhancement, ui/ux"
+Theseus,30,Star summary,enhancement
+Theseus,27,feat: support for local repository paths,enhancement
+Elenchus,15,explore faster-whisper to cactus-whistle migration,
+Elenchus,7,add functionality to hear external audio,enhancement
+Elenchus,3,UI version improvements,enhancement
 backpocket,12,update the pyproject toml default template,
 backpocket,11,make mkdocs,documentation
 vent,1,implement praw when api key arrives,"enhancement, good first issue"
