@@ -1,11 +1,11 @@
 repo_name,issue_number,title,labels
 portfolio,152,add elenchus and ghpm to the project section,
-portfolio,151,add a journal button on the projects as well,"documentation, enhancement, frontend"
 portfolio,135,Code snippet for public commits per day,"documentation, enhancement, good first issue, frontend"
 portfolio,127,add public speaking and educator optimisations,"enhancement, SEO"
 portfolio,105,implement radar graph for skills,enhancement
+doh,22,more cybersecurity questions,add-questions
+doh,21,add myth busters,"enhancement, add-questions"
 second-brain,227,Add notes about this ,feature-request
-second-brain,226,https://www.datascience-pm.com/,feature-request
 second-brain,224,Mary room thought experiment,feature-request
 second-brain,194,Ken thompson: Malicious code in compiler,feature-request
 second-brain,193,Read this article on package manager,feature-request
@@ -53,8 +53,6 @@ DORA,62,update text color for readability,enhancement
 DORA,46,add handling for UCI repository like kaggle,enhancement
 DORA,42,add custom color palette + dark mode,enhancement
 getting-rusty,1,getting started with basics,documentation
-doh,22,more cybersecurity questions,add-questions
-doh,21,add myth busters,"enhancement, add-questions"
 WhatsNew,12,adding new feeds,
 WhatsNew,7,Add logic to archive all the news on the yearly basis,
 lexical-labyrinths,1,set-up and mvp,

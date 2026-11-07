@@ -3,32 +3,37 @@
     {
       "name": "portfolio",
       "description": " Personal portfolio of Asif Sayyed, Data Science Specialist. A fast, statically generated website optimized for AI Search (GEO) and built with HTML, CSS, JS, and Python automation.",
-      "updatedAt": "2026-09-26T09:56:34Z"
+      "updatedAt": "2026-11-02T17:41:33Z"
     },
     {
       "name": "happy-birthday-jivisha",
       "description": "",
-      "updatedAt": "2026-10-30T06:02:47Z"
+      "updatedAt": "2026-11-06T15:25:14Z"
     },
     {
-      "name": "second-brain",
-      "description": "A personal knowledge base and second brain",
-      "updatedAt": "2026-10-29T07:08:27Z"
+      "name": "doh",
+      "description": "Spark an argument. Realize you\u2019re wrong. Say the word.",
+      "updatedAt": "2026-11-05T04:40:34Z"
     },
     {
       "name": "journals",
       "description": "Log book of my personal decision making, learnings and mistakes",
-      "updatedAt": "2026-10-28T06:55:43Z"
+      "updatedAt": "2026-11-02T06:10:19Z"
+    },
+    {
+      "name": "second-brain",
+      "description": "A personal knowledge base and second brain",
+      "updatedAt": "2026-11-01T12:43:42Z"
     },
     {
       "name": "Theseus",
       "description": "Does a codebase remain the same if every line is replaced? A monthly pulse on software entropy.",
-      "updatedAt": "2026-10-26T07:29:48Z"
+      "updatedAt": "2026-11-01T06:35:50Z"
     },
     {
       "name": "ghpm",
       "description": "Github project management pipeline",
-      "updatedAt": "2026-10-24T03:15:01Z"
+      "updatedAt": "2026-10-31T04:00:00Z"
     },
     {
       "name": "uroboro",
@@ -78,7 +83,7 @@
     {
       "name": "DORA",
       "description": "DORA (Data Oriented Report Automator) automates Exploratory Data Analysis (EDA) to help you effortlessly explore datasets. Generate insightful statistics, visualizations, and reports with just a click! Streamline your data exploration workflow and uncover trends, patterns, and relationships in your data with ease.",
-      "updatedAt": "2026-10-29T04:32:17Z"
+      "updatedAt": "2026-11-05T12:20:05Z"
     },
     {
       "name": "TrueML",
@@ -114,11 +119,6 @@
       "name": "getting-rusty",
       "description": "This is the learning repository to contain all the code I write while learning and understanding rust.",
       "updatedAt": "2026-07-28T08:15:50Z"
-    },
-    {
-      "name": "doh",
-      "description": "Spark an argument. Realize you\u2019re wrong. Say the word.",
-      "updatedAt": "2026-07-31T10:50:07Z"
     },
     {
       "name": "test",
@@ -370,12 +370,6 @@
     },
     {
       "repo_name": "portfolio",
-      "issue_number": "151",
-      "title": "add a journal button on the projects as well",
-      "labels": "documentation, enhancement, frontend"
-    },
-    {
-      "repo_name": "portfolio",
       "issue_number": "135",
       "title": "Code snippet for public commits per day",
       "labels": "documentation, enhancement, good first issue, frontend"
@@ -393,15 +387,21 @@
       "labels": "enhancement"
     },
     {
-      "repo_name": "second-brain",
-      "issue_number": "227",
-      "title": "Add notes about this ",
-      "labels": "feature-request"
+      "repo_name": "doh",
+      "issue_number": "22",
+      "title": "more cybersecurity questions",
+      "labels": "add-questions"
+    },
+    {
+      "repo_name": "doh",
+      "issue_number": "21",
+      "title": "add myth busters",
+      "labels": "enhancement, add-questions"
     },
     {
       "repo_name": "second-brain",
-      "issue_number": "226",
-      "title": "https://www.datascience-pm.com/",
+      "issue_number": "227",
+      "title": "Add notes about this ",
       "labels": "feature-request"
     },
     {
@@ -685,18 +685,6 @@
       "issue_number": "1",
       "title": "getting started with basics",
       "labels": "documentation"
-    },
-    {
-      "repo_name": "doh",
-      "issue_number": "22",
-      "title": "more cybersecurity questions",
-      "labels": "add-questions"
-    },
-    {
-      "repo_name": "doh",
-      "issue_number": "21",
-      "title": "add myth busters",
-      "labels": "enhancement, add-questions"
     },
     {
       "repo_name": "WhatsNew",
@@ -4672,6 +4660,17 @@
       "concentration_pct": 49.0,
       "opened": 8,
       "closed": 7
+    },
+    {
+      "date": "2026-11-07",
+      "iso_week": "2026-W45",
+      "total_repos": 72,
+      "total_issues": 102,
+      "active_repos": 34,
+      "zero_repos": 38,
+      "concentration_pct": 49.0,
+      "opened": 0,
+      "closed": 2
     }
   ]
 }
