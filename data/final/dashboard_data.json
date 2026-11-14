@@ -6,6 +6,11 @@
       "updatedAt": "2026-11-02T17:41:33Z"
     },
     {
+      "name": "ghpm",
+      "description": "Github project management pipeline",
+      "updatedAt": "2026-11-07T04:37:11Z"
+    },
+    {
       "name": "happy-birthday-jivisha",
       "description": "",
       "updatedAt": "2026-11-06T15:25:14Z"
@@ -29,11 +34,6 @@
       "name": "Theseus",
       "description": "Does a codebase remain the same if every line is replaced? A monthly pulse on software entropy.",
       "updatedAt": "2026-11-01T06:35:50Z"
-    },
-    {
-      "name": "ghpm",
-      "description": "Github project management pipeline",
-      "updatedAt": "2026-10-31T04:00:00Z"
     },
     {
       "name": "uroboro",
@@ -83,7 +83,7 @@
     {
       "name": "DORA",
       "description": "DORA (Data Oriented Report Automator) automates Exploratory Data Analysis (EDA) to help you effortlessly explore datasets. Generate insightful statistics, visualizations, and reports with just a click! Streamline your data exploration workflow and uncover trends, patterns, and relationships in your data with ease.",
-      "updatedAt": "2026-11-05T12:20:05Z"
+      "updatedAt": "2026-11-12T16:18:56Z"
     },
     {
       "name": "TrueML",
@@ -364,6 +364,12 @@
   "issues": [
     {
       "repo_name": "portfolio",
+      "issue_number": "155",
+      "title": "[CI Optimization & Hardening]: portfolio",
+      "labels": ""
+    },
+    {
+      "repo_name": "portfolio",
       "issue_number": "152",
       "title": "add elenchus and ghpm to the project section",
       "labels": ""
@@ -387,16 +393,46 @@
       "labels": "enhancement"
     },
     {
-      "repo_name": "doh",
-      "issue_number": "22",
-      "title": "more cybersecurity questions",
-      "labels": "add-questions"
+      "repo_name": "ghpm",
+      "issue_number": "28",
+      "title": "[CI Optimization & Hardening]: ghpm",
+      "labels": ""
     },
     {
       "repo_name": "doh",
-      "issue_number": "21",
-      "title": "add myth busters",
-      "labels": "enhancement, add-questions"
+      "issue_number": "46",
+      "title": "[CI Optimization & Hardening]: doh",
+      "labels": ""
+    },
+    {
+      "repo_name": "journals",
+      "issue_number": "33",
+      "title": "[CI Optimization & Hardening]: journals",
+      "labels": ""
+    },
+    {
+      "repo_name": "second-brain",
+      "issue_number": "233",
+      "title": "Fix codebase",
+      "labels": "feature-request"
+    },
+    {
+      "repo_name": "second-brain",
+      "issue_number": "232",
+      "title": "Set up profile on",
+      "labels": ""
+    },
+    {
+      "repo_name": "second-brain",
+      "issue_number": "231",
+      "title": "[CI Optimization & Hardening]: second-brain",
+      "labels": ""
+    },
+    {
+      "repo_name": "second-brain",
+      "issue_number": "230",
+      "title": "https://www.chess.com/analysis/game/live/186696559226/review",
+      "labels": ""
     },
     {
       "repo_name": "second-brain",
@@ -478,6 +514,12 @@
     },
     {
       "repo_name": "Theseus",
+      "issue_number": "110",
+      "title": "[CI Optimization & Hardening]: Theseus",
+      "labels": ""
+    },
+    {
+      "repo_name": "Theseus",
       "issue_number": "108",
       "title": "Provide one-line VM bootstrapping script and updated onboarding documentation",
       "labels": "enhancement, v2.1.0"
@@ -537,6 +579,18 @@
       "labels": "enhancement"
     },
     {
+      "repo_name": "uroboro",
+      "issue_number": "3",
+      "title": "[CI Optimization & Hardening]: uroboro",
+      "labels": ""
+    },
+    {
+      "repo_name": "Elenchus",
+      "issue_number": "19",
+      "title": "[CI Optimization & Hardening]: Elenchus",
+      "labels": ""
+    },
+    {
       "repo_name": "Elenchus",
       "issue_number": "15",
       "title": "explore faster-whisper to cactus-whistle migration",
@@ -553,6 +607,12 @@
       "issue_number": "3",
       "title": "UI version improvements",
       "labels": "enhancement"
+    },
+    {
+      "repo_name": "backpocket",
+      "issue_number": "13",
+      "title": "[CI Optimization & Hardening]: backpocket",
+      "labels": ""
     },
     {
       "repo_name": "backpocket",
@@ -580,6 +640,12 @@
     },
     {
       "repo_name": "SERPENT",
+      "issue_number": "33",
+      "title": "[CI Optimization & Hardening]: SERPENT",
+      "labels": ""
+    },
+    {
+      "repo_name": "SERPENT",
       "issue_number": "31",
       "title": "make library that can explain a function it is passed onto",
       "labels": "enhancement"
@@ -589,6 +655,12 @@
       "issue_number": "26",
       "title": "implement english to flow chart",
       "labels": "enhancement"
+    },
+    {
+      "repo_name": "yoink",
+      "issue_number": "18",
+      "title": "[CI Optimization & Hardening]: yoink",
+      "labels": ""
     },
     {
       "repo_name": "yoink",
@@ -640,6 +712,12 @@
     },
     {
       "repo_name": "DORA",
+      "issue_number": "73",
+      "title": "[CI Optimization & Hardening]: DORA",
+      "labels": ""
+    },
+    {
+      "repo_name": "DORA",
       "issue_number": "71",
       "title": "streamlit app broke",
       "labels": "bug"
@@ -681,10 +759,22 @@
       "labels": "enhancement"
     },
     {
+      "repo_name": "benchmark-inflation-simulator",
+      "issue_number": "1",
+      "title": "[CI Optimization & Hardening]: benchmark-inflation-simulator",
+      "labels": ""
+    },
+    {
       "repo_name": "getting-rusty",
       "issue_number": "1",
       "title": "getting started with basics",
       "labels": "documentation"
+    },
+    {
+      "repo_name": "WhatsNew",
+      "issue_number": "13",
+      "title": "[CI Optimization & Hardening]: WhatsNew",
+      "labels": ""
     },
     {
       "repo_name": "WhatsNew",
@@ -702,6 +792,12 @@
       "repo_name": "lexical-labyrinths",
       "issue_number": "1",
       "title": "set-up and mvp",
+      "labels": ""
+    },
+    {
+      "repo_name": "rule-of-5-visualiser",
+      "issue_number": "5",
+      "title": "[CI Optimization & Hardening]: rule-of-5-visualiser",
       "labels": ""
     },
     {
@@ -4670,6 +4766,17 @@
       "zero_repos": 38,
       "concentration_pct": 49.0,
       "opened": 0,
+      "closed": 2
+    },
+    {
+      "date": "2026-11-14",
+      "iso_week": "2026-W46",
+      "total_repos": 72,
+      "total_issues": 118,
+      "active_repos": 38,
+      "zero_repos": 34,
+      "concentration_pct": 47.5,
+      "opened": 18,
       "closed": 2
     }
   ]

@@ -1,10 +1,16 @@
 repo_name,issue_number,title,labels
+portfolio,155,[CI Optimization & Hardening]: portfolio,
 portfolio,152,add elenchus and ghpm to the project section,
 portfolio,135,Code snippet for public commits per day,"documentation, enhancement, good first issue, frontend"
 portfolio,127,add public speaking and educator optimisations,"enhancement, SEO"
 portfolio,105,implement radar graph for skills,enhancement
-doh,22,more cybersecurity questions,add-questions
-doh,21,add myth busters,"enhancement, add-questions"
+ghpm,28,[CI Optimization & Hardening]: ghpm,
+doh,46,[CI Optimization & Hardening]: doh,
+journals,33,[CI Optimization & Hardening]: journals,
+second-brain,233,Fix codebase,feature-request
+second-brain,232,Set up profile on,
+second-brain,231,[CI Optimization & Hardening]: second-brain,
+second-brain,230,https://www.chess.com/analysis/game/live/186696559226/review,
 second-brain,227,Add notes about this ,feature-request
 second-brain,224,Mary room thought experiment,feature-request
 second-brain,194,Ken thompson: Malicious code in compiler,feature-request
@@ -18,6 +24,7 @@ second-brain,170,Quantum entanglement or spooky action at a distance,feature-req
 second-brain,161,reproduce a ml paper,
 second-brain,137,CUDA,
 second-brain,102,User based accent selection,
+Theseus,110,[CI Optimization & Hardening]: Theseus,
 Theseus,108,Provide one-line VM bootstrapping script and updated onboarding documentation,"enhancement, v2.1.0"
 Theseus,107,Unify configuration management and eliminate public/theseus.config.json drift,"enhancement, v2.1.0"
 Theseus,106,Build independent tag and release milestone extraction module,"enhancement, v2.1.0"
@@ -28,15 +35,20 @@ Theseus,102,v2.1.0: Developer Experience Enchancement,"enhancement, v2.1.0"
 Theseus,75,make the ui responsive,"enhancement, ui/ux"
 Theseus,30,Star summary,enhancement
 Theseus,27,feat: support for local repository paths,enhancement
+uroboro,3,[CI Optimization & Hardening]: uroboro,
+Elenchus,19,[CI Optimization & Hardening]: Elenchus,
 Elenchus,15,explore faster-whisper to cactus-whistle migration,
 Elenchus,7,add functionality to hear external audio,enhancement
 Elenchus,3,UI version improvements,enhancement
+backpocket,13,[CI Optimization & Hardening]: backpocket,
 backpocket,12,update the pyproject toml default template,
 backpocket,11,make mkdocs,documentation
 vent,1,implement praw when api key arrives,"enhancement, good first issue"
 tram,1,"TRAM MVP (install, remove, list, check) using Python Standard Library",
+SERPENT,33,[CI Optimization & Hardening]: SERPENT,
 SERPENT,31,make library that can explain a function it is passed onto,enhancement
 SERPENT,26,implement english to flow chart,enhancement
+yoink,18,[CI Optimization & Hardening]: yoink,
 yoink,17,ModuleNotFoundError: No module named 'yoink',bug
 yoink,6,brainstorm implementation into CLI tools,
 Natural-LangWiz,50,Tidy up the project,enhancement
@@ -45,6 +57,7 @@ Natural-LangWiz,48,Dependency Parsing,
 Natural-LangWiz,47,Fine-Tuning a Transformer Model,
 Natural-LangWiz,46,Relationship Extraction,
 Natural-LangWiz,45,Word Embeddings,
+DORA,73,[CI Optimization & Hardening]: DORA,
 DORA,71,streamlit app broke,bug
 DORA,70,improve tui,enhancement
 DORA,67,implement time series analysis,enhancement
@@ -52,10 +65,13 @@ DORA,63,Update the demo website,enhancement
 DORA,62,update text color for readability,enhancement
 DORA,46,add handling for UCI repository like kaggle,enhancement
 DORA,42,add custom color palette + dark mode,enhancement
+benchmark-inflation-simulator,1,[CI Optimization & Hardening]: benchmark-inflation-simulator,
 getting-rusty,1,getting started with basics,documentation
+WhatsNew,13,[CI Optimization & Hardening]: WhatsNew,
 WhatsNew,12,adding new feeds,
 WhatsNew,7,Add logic to archive all the news on the yearly basis,
 lexical-labyrinths,1,set-up and mvp,
+rule-of-5-visualiser,5,[CI Optimization & Hardening]: rule-of-5-visualiser,
 rule-of-5-visualiser,3,implement visualisation,enhancement
 MarkMyBench,4,Traditional RAG vs PageIndex RAG,enhancement
 MarkMyBench,3,pandas vs polars,
