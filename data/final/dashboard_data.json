@@ -83,7 +83,7 @@
     {
       "name": "DORA",
       "description": "DORA (Data Oriented Report Automator) automates Exploratory Data Analysis (EDA) to help you effortlessly explore datasets. Generate insightful statistics, visualizations, and reports with just a click! Streamline your data exploration workflow and uncover trends, patterns, and relationships in your data with ease.",
-      "updatedAt": "2026-11-12T16:18:56Z"
+      "updatedAt": "2026-11-18T09:32:41Z"
     },
     {
       "name": "TrueML",
@@ -108,7 +108,7 @@
     {
       "name": "Asifdotexe",
       "description": "",
-      "updatedAt": "2026-08-04T07:21:23Z"
+      "updatedAt": "2026-11-18T09:06:28Z"
     },
     {
       "name": "cheek-syndicate",
@@ -426,12 +426,6 @@
       "repo_name": "second-brain",
       "issue_number": "231",
       "title": "[CI Optimization & Hardening]: second-brain",
-      "labels": ""
-    },
-    {
-      "repo_name": "second-brain",
-      "issue_number": "230",
-      "title": "https://www.chess.com/analysis/game/live/186696559226/review",
       "labels": ""
     },
     {
@@ -4778,6 +4772,17 @@
       "concentration_pct": 47.5,
       "opened": 18,
       "closed": 2
+    },
+    {
+      "date": "2026-11-21",
+      "iso_week": "2026-W47",
+      "total_repos": 72,
+      "total_issues": 117,
+      "active_repos": 38,
+      "zero_repos": 34,
+      "concentration_pct": 47.0,
+      "opened": 0,
+      "closed": 1
     }
   ]
 }

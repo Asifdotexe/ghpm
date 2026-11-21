@@ -15,12 +15,12 @@ tram,Terminal Router for Agent Modules,2026-08-14T11:10:24Z
 SERPENT,Syntactic Extraction and Rendering of Python’s End-to-end Node Trees,2026-02-11T07:36:42Z
 yoink,"Yoink is a CLI tool and FastAPI backend that bundles, sanitizes, and visualizes codebases for Large Language Model (LLM) contexts. It optimizes token consumption by packing directories into structured Markdown while actively preventing compliance and security leaks.",2026-06-27T10:26:18Z
 Natural-LangWiz,Natural LangWiz is a repository for exploring Natural Language Processing (NLP) techniques through Jupyter notebooks. It covers everything from text preprocessing and sentiment analysis to advanced transformer models. Dive in to see how we turn raw text into actionable insights with a touch of NLP wizardry!,2026-05-06T19:35:30Z
-DORA,"DORA (Data Oriented Report Automator) automates Exploratory Data Analysis (EDA) to help you effortlessly explore datasets. Generate insightful statistics, visualizations, and reports with just a click! Streamline your data exploration workflow and uncover trends, patterns, and relationships in your data with ease.",2026-11-12T16:18:56Z
+DORA,"DORA (Data Oriented Report Automator) automates Exploratory Data Analysis (EDA) to help you effortlessly explore datasets. Generate insightful statistics, visualizations, and reports with just a click! Streamline your data exploration workflow and uncover trends, patterns, and relationships in your data with ease.",2026-11-18T09:32:41Z
 TrueML,"TrueML - a hackable machine learning library without ""model.fit()"". Built from first principles, you can see exactly what’s happening.",2026-09-14T13:01:19Z
 benchmark-inflation-simulator,This project aims to make a very basic demonstration of how benchmark scores can be inflated without make the underlying model smarter,2026-09-05T06:10:00Z
 presentations,A repository to contains all the presentations I created,2026-08-29T10:54:27Z
 skill-issue,Repository containing all the custom skill files made by me,2026-08-14T17:26:38Z
-Asifdotexe,,2026-08-04T07:21:23Z
+Asifdotexe,,2026-11-18T09:06:28Z
 cheek-syndicate,,2026-08-02T18:07:07Z
 getting-rusty,This is the learning repository to contain all the code I write while learning and understanding rust.,2026-07-28T08:15:50Z
 test,,2026-06-18T12:15:24Z
